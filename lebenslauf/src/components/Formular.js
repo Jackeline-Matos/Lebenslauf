@@ -63,14 +63,6 @@ const Formular = () => {
           </div>
         </div>
         <div className="buttons">
-          <button class="cta we">
-            <span>
-              {" "}
-              Weiter
-              <FontAwesomeIcon icon={faArrowRight} />
-            </span>
-            <svg viewBox="0 0 13 10" height="10px" width="15px"></svg>
-          </button>
           <button
             class="cta zu"
             onClick={() => {
@@ -83,6 +75,14 @@ const Formular = () => {
               <FontAwesomeIcon icon={faArrowLeft} />
               Zurück
             </span>
+          </button>
+          <button class="cta we">
+            <span>
+              {" "}
+              Weiter
+              <FontAwesomeIcon icon={faArrowRight} />
+            </span>
+            <svg viewBox="0 0 13 10" height="10px" width="15px"></svg>
           </button>
         </div>
       </form>

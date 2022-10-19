@@ -17,7 +17,7 @@ const Startseite = () => {
 
           onClick={() => {
             setMove(!move);
-            const nav = () => navigate("/formular");
+            const nav = () => navigate("/templates");
             nav();
           }}
           className="button"
