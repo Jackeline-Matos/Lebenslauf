@@ -8,7 +8,8 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Startseite />} />
-      <Route path="/formular/:template" element={<Formular />} />
+      <Route path="/formular" element={<Formular />} />
+      <Route path="/formular/:template" element={<Lebenslauf />} />
       <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   );
