@@ -66,7 +66,7 @@ const Formular = () => {
           <button
             class="cta zu"
             onClick={() => {
-              const nav = () => navigate("/");
+              const nav = () => navigate("/templates");
               nav();
             }}
           >
