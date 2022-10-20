@@ -1,14 +1,15 @@
 import { motion } from "framer-motion";
-import "./Formular.css";
+import "./FormularZwei.css";
 import { useState } from "react";
 const FormularZwei = () => {
+  const [option, setOptions] = useState("Bachelor");
   return (
     <motion.div
       initial={{ width: 0 }}
       animate={{ width: "100vw" }}
       exit={{ x: "window.innerWidth", transition: { duration: 0.1 } }}
     >
-      <h1>Schulbildung</h1>
+      <h2>Schulbildung</h2>
 
       <form>
         <div className="zeile">
@@ -20,11 +21,7 @@ const FormularZwei = () => {
             <label htmlFor="vorname">Schule</label>
             <input type="text" id="schule" />
           </div>
-          <div className="flex-eins">
-            <label>von</label>
-            <input type="date" id="start-schule" />
-          </div>
-
+          effect
           <div className="flex-eins">
             <label>bis</label>
             <input type="date" id="end-schule" />
@@ -52,20 +49,20 @@ const FormularZwei = () => {
         </div>
 
         <div className="zeile">
-          <div className="flex-zwei">
+          <div className="flex">
             <label>Abschluss</label>
             <select>
-              <option value="grapefruit"></option>
-              <option value="lime"></option>
-              <option selected value="coconut"></option>
-              <option value="mango"></option>
+              <option value="bachelor">Bachelor</option>
+              <option value="master">Master</option>
+              <option value="diplom">Diplom</option>
             </select>
+            <input type="submit" value="Submit" />
           </div>
-          <div className="flex-zwei">
+          <div className="flex">
             <label>Studiengang</label>
             <input type="text" id="universitat" />
           </div>
-          <div className="flex-zwei">
+          <div className="flex">
             <label>am</label>
             <input type="date" id="end-universitat" />
           </div>
