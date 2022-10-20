@@ -9,9 +9,14 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { MotionConfig } from "framer-motion";
+
+import UserContext from "../context/UserContext";
+import { useContext } from "react";
 const Formular = () => {
   const navigate = useNavigate();
+  const [user, setUser] = useContext(UserContext);
   const [move, setMove] = useState(false);
+  console.log(user);
   return (
     <motion.div
       initial={{ width: 0 }}

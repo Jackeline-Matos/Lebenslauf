@@ -2,9 +2,13 @@ import "./Startseite.css";
 import { motion } from "framer-motion";
 import { Navigate, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import UserContext from "../context/UserContext";
+import { useContext } from "react";
 const Startseite = () => {
+  const [user, setUser] = useContext(UserContext);
   const [move, setMove] = useState(false);
   const navigate = useNavigate();
+
   return (
     <motion.div
       initial={{ width: 0 }}
