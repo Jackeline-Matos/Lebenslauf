@@ -49,18 +49,6 @@ function App() {
   });
 
   // useEffect(() => {
-  //   const userData = JSON.parse(localStorage.getItem("data"));
-
-  //   if (userData) {
-  //     setUser(userData);
-  //   }
-  // }, []);
-
-  useEffect(() => {
-    localStorage.setItem("data", JSON.stringify(user));
-  }, [user]);
-
-  // useEffect(() => {
   //   const cartItemsData = JSON.parse(localStorage.getItem('cartItems'))
 
   //   if (cartItemsData) {

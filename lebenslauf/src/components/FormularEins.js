@@ -10,10 +10,22 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import UserContext from "../context/UserContext";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 
 const FormularEins = () => {
   const [user, setUser] = useContext(UserContext);
+  useEffect(() => {
+    const userData = JSON.parse(localStorage.getItem("data"));
+
+    if (userData) {
+      setUser(userData);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("data", JSON.stringify(user));
+  }, [user]);
+
   const [move, setMove] = useState(false);
   const navigate = useNavigate();
 

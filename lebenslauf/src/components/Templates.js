@@ -13,10 +13,23 @@ import {
 import UserContext from "../context/UserContext";
 import { useContext } from "react";
 import { useState } from "react";
+import { useEffect } from "react";
 const Templates = () => {
   const [user, setUser] = useContext(UserContext);
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const userData = JSON.parse(localStorage.getItem("data"));
+
+    if (userData) {
+      setUser(userData);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("data", JSON.stringify({ ...user, user }));
+  }, [user]);
   return (
     <motion.div
       className="parent"

@@ -1,6 +1,6 @@
 import "./Formular.css";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import {
   faArrowLeft,
@@ -12,8 +12,20 @@ import { MotionConfig } from "framer-motion";
 import UserContext from "../context/UserContext";
 import { useContext } from "react";
 const Formular = () => {
-  const navigate = useNavigate();
   const [user, setUser] = useContext(UserContext);
+  useEffect(() => {
+    const userData = JSON.parse(localStorage.getItem("data"));
+
+    if (userData) {
+      setUser(userData);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("data", JSON.stringify(user));
+  }, [user]);
+  const navigate = useNavigate();
+
   const [move, setMove] = useState(false);
 
   const submitHaendler = (e) => {
