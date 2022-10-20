@@ -10,8 +10,12 @@ import {
   faArrowRight,
   faHome,
 } from "@fortawesome/free-solid-svg-icons";
-
+import UserContext from "../context/UserContext";
+import { useContext } from "react";
+import { useState } from "react";
 const Templates = () => {
+  const [user, setUser] = useContext(UserContext);
+
   const navigate = useNavigate();
   return (
     <motion.div
@@ -57,6 +61,7 @@ const Templates = () => {
           <svg viewBox="0 0 13 10" height="10px" width="15px"></svg>
           <span
             onClick={() => {
+              setUser({ ...user, template: 1 });
               navigate("/formular");
             }}
           >
@@ -87,6 +92,7 @@ const Templates = () => {
           <svg viewBox="0 0 13 10" height="10px" width="15px"></svg>
           <span
             onClick={() => {
+              setUser({ ...user, template: 2 });
               navigate("/formular");
             }}
           >
@@ -116,6 +122,7 @@ const Templates = () => {
           <svg viewBox="0 0 13 10" height="10px" width="15px"></svg>
           <span
             onClick={() => {
+              setUser({ ...user, template: 3 });
               navigate("/formular");
             }}
           >
