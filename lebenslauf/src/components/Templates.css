@@ -25,6 +25,7 @@ img {
   align-items: center;
   justify-content: space-between;
   margin: auto;
+  padding-top: 80px;
 }
 .imOne {
   display: flex;
@@ -43,6 +44,13 @@ img {
   align-items: center;
   margin-left: 0;
 }
+
+ .button-zuruck-template{
+  position: absolute;
+  top:5px;
+  right: 90px;
+
+ }
 .cta:before {
   content: "";
   position: absolute;

@@ -15,6 +15,22 @@ const Templates = () => {
   const navigate = useNavigate();
   return (
     <div className="parent">
+      <div className="button-zuruck-template">
+        <button
+          class="cta zu"
+          onClick={() => {
+            const nav = () => navigate("/");
+            nav();
+          }}
+        >
+          <svg viewBox="0 0 13 10" height="10px" width="15px"></svg>
+          <span>
+            <FontAwesomeIcon icon={faArrowLeft} />
+            Zurück
+          </span>
+        </button>
+      </div>
+
       <div className="imOne">
         <motion.img
           whileHover={{ scale: 1.2 }}
