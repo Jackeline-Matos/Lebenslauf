@@ -14,7 +14,12 @@ import {
 const Templates = () => {
   const navigate = useNavigate();
   return (
-    <div className="parent">
+    <motion.div
+      className="parent"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <div className="button-zuruck-template">
         <button
           class="cta zu"
@@ -47,8 +52,6 @@ const Templates = () => {
           animate={{ move: 200 }}
           transition={{ type: "spring", bounce: 0.01 }}
           src={curricolo}
-          style={{ zIndex: 1 }}
-          //   onclick einfügen und damit einen usestate verändern damit zIndem auf eins kommt ternary
         />
         <button class="cta zu">
           <svg viewBox="0 0 13 10" height="10px" width="15px"></svg>
@@ -61,19 +64,6 @@ const Templates = () => {
             <FontAwesomeIcon icon={faArrowRight} />
           </span>
         </button>
-        {/* <motion.span
-          whileHover={{ scale: 1.2 }}
-          drag
-          whileDrag={{ scale: 4 }}
-          animate={{ move: 200 }}
-          transition={{ type: "spring", bounce: 0.01 }}
-          src={curricolo}
-          onClick={() => {
-            navigate("/formular");
-          }}
-        >
-          Choose
-        </motion.span> */}
       </div>
 
       <div className="imTwo">
@@ -87,7 +77,7 @@ const Templates = () => {
             bottom: 0,
             scale: 4,
           }}
-          whileDrag={{ scale: 2 }}
+          whileDrag={{ scale: 2, zIndex: 1 }}
           onDragEnd={{ top: 0, left: 0, right: 0, bottom: 0 }}
           animate={{ move: 200 }}
           transition={{ type: "spring", bounce: 0.01 }}
@@ -116,12 +106,11 @@ const Templates = () => {
             bottom: 0,
             scale: 4,
           }}
-          whileDrag={{ scale: 2 }}
+          whileDrag={{ scale: 2, zIndex: 1 }}
           onDragEnd={{ top: 0, left: 0, right: 0, bottom: 0 }}
           animate={{ move: 200 }}
           transition={{ type: "spring", bounce: 0.01 }}
           src={curricoloZwei}
-          style={{ zIndex: 1 }}
         />
         <button class="cta zu">
           <svg viewBox="0 0 13 10" height="10px" width="15px"></svg>
@@ -135,7 +124,7 @@ const Templates = () => {
           </span>
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
