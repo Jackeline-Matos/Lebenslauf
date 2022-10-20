@@ -38,48 +38,48 @@ const FormularEins = () => {
           </div>
 
           <div className="flex">
-            <label htmlFor="stellen">Stellen</label>
-            <input type="text" id="stellen" />
+            <label htmlFor="position">Position</label>
+            <input type="text" id="position" />
           </div>
         </div>
 
         <div className="zeile">
           <div className="flex-eins">
             <label>Von</label>
-            <input type="date" id="start" />
+            <input type="date" id="startEins" />
           </div>
 
           <div className="flex-eins">
             <label>Bis</label>
-            <input type="date" id="end" />
+            <input type="date" id="endEins" />
           </div>
           <div className="flex">
             <label htmlFor="unternehmen">Unternehmen</label>
-            <input type="text" id="unternehmen" />
+            <input type="text" id="unternehmenEins" />
           </div>
           <div className="flex">
-            <label htmlFor="stellen">Stellen</label>
-            <input type="text" id="stellen" />
+            <label htmlFor="position">Position</label>
+            <input type="text" id="positionEins" />
           </div>
         </div>
 
         <div className="zeile">
           <div className="flex-eins">
             <label>Von</label>
-            <input type="date" id="start" />
+            <input type="date" id="startZwei" />
           </div>
 
           <div className="flex-eins">
             <label>Bis</label>
-            <input type="date" id="end" />
+            <input type="date" id="endZwei" />
           </div>
           <div className="flex">
             <label htmlFor="unternehmen">Unternehmen</label>
-            <input type="text" id="unternehmen" />
+            <input type="text" id="unternehmenZwei" />
           </div>
           <div className="flex">
-            <label htmlFor="stellen">Stellen</label>
-            <input type="text" id="stellen" />
+            <label htmlFor="position">Position</label>
+            <input type="text" id="positionZwei" />
           </div>
         </div>
 
