@@ -5,7 +5,7 @@ import { useState } from "react";
 import UserContext from "../context/UserContext";
 import { useContext } from "react";
 const Startseite = () => {
-  const [user, setUser] = useContext(UserContext);
+  const user = useContext(UserContext);
   const [move, setMove] = useState(false);
   const navigate = useNavigate();
 

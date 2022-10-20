@@ -9,6 +9,7 @@ import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import UserContext from "./context/UserContext";
 import { useState } from "react";
+import { useEffect } from "react";
 function App() {
   const location = useLocation();
   const user = useState({
@@ -36,6 +37,30 @@ function App() {
     unternehmenZwei: "",
     stellenZwei: "",
   });
+
+  // useEffect(() => {
+  //   const userData = JSON.parse(localStorage.getItem("data"));
+
+  //   if (userData) {
+  //     setUser(userData);
+  //   }
+  // }, []);
+
+  useEffect(() => {
+    localStorage.setItem("data", JSON.stringify(user));
+  }, [user]);
+
+  // useEffect(() => {
+  //   const cartItemsData = JSON.parse(localStorage.getItem('cartItems'))
+
+  //   if (cartItemsData) {
+  //       setCartItems(cartItemsData)
+  //   }
+  // }, [])
+
+  // useEffect(() => {
+  //   localStorage.setItem('cartItems', JSON.stringify(cartItems))
+  // }, [cartItems])
   return (
     <UserContext.Provider value={user}>
       <AnimatePresence>
