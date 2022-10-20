@@ -1,6 +1,8 @@
 import "./App.css";
 import Lebenslauf from "./components/Lebenslauf";
 import Formular from "./components/Formular";
+import FormularEins from "./components/FormularEins";
+import FormularZwei from "./components/FormularZwei";
 import Startseite from "./components/Startseite";
 import Templates from "./components/Templates";
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";

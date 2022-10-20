@@ -1,5 +1,7 @@
 import "./Formular.css";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+
 import {
   faArrowLeft,
   faArrowRight,
@@ -8,6 +10,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Formular = () => {
   const navigate = useNavigate();
+  const [move, setMove] = useState(false);
   return (
     <>
       <h1>Persönliche Daten</h1>
@@ -76,7 +79,14 @@ const Formular = () => {
               Zurück
             </span>
           </button>
-          <button class="cta we">
+          <button
+            class="cta we"
+            onClick={() => {
+              setMove(!move);
+              const nav = () => navigate("/formulareins");
+              nav();
+            }}
+          >
             <span>
               {" "}
               Weiter
