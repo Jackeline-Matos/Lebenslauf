@@ -170,7 +170,7 @@ const FormularEins = () => {
         </div>
       </form>
       <button
-        class="cta zu"
+        class="cta zu beru"
         onClick={() => {
           const nav = () => navigate("/formular");
           nav();

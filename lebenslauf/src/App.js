@@ -36,6 +36,16 @@ function App() {
     endZwei: "",
     unternehmenZwei: "",
     stellenZwei: "",
+    ausbildung: "",
+    schule: "",
+    endSchule: "",
+    bachelor: "",
+    universitaet: "",
+    startUniversitaet: "",
+    endUniersitaet: "",
+    schuleOption: "",
+    studiengang: "",
+    endStudiengang: "",
   });
 
   // useEffect(() => {

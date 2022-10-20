@@ -142,7 +142,7 @@ const Formular = () => {
         </div>
       </form>
       <button
-        class="cta zu"
+        class="cta zu per"
         onClick={() => {
           const nav = () => navigate("/templates");
           nav();
