@@ -1,0 +1,11 @@
+.flex-eins {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin: 0.5rem;
+  }
+
+  h3{
+    margin-top: 1rem;
+    margin-left: 1rem;
+  }
