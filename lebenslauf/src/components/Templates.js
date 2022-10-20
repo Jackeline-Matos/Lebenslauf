@@ -16,9 +16,9 @@ const Templates = () => {
   return (
     <motion.div
       className="parent"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      initial={{ width: 0 }}
+      animate={{ width: "100vw" }}
+      exit={{ x: "window.innerWidth", transition: { duration: 0.1 } }}
     >
       <div className="button-zuruck-template">
         <button

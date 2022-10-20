@@ -1,18 +1,23 @@
 import "./Formular.css";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-
+import { motion } from "framer-motion";
 import {
   faArrowLeft,
   faArrowRight,
   faHome,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { MotionConfig } from "framer-motion";
 const Formular = () => {
   const navigate = useNavigate();
   const [move, setMove] = useState(false);
   return (
-    <>
+    <motion.div
+      initial={{ width: 0 }}
+      animate={{ width: "100vw" }}
+      exit={{ x: "window.innerWidth", transition: { duration: 0.1 } }}
+    >
       <h1>Persönliche Daten</h1>
       <form>
         <div className="zeile">
@@ -83,7 +88,7 @@ const Formular = () => {
             class="cta we"
             onClick={() => {
               setMove(!move);
-              const nav = () => navigate("/formulareins");
+              const nav = () => navigate("/formular1");
               nav();
             }}
           >
@@ -96,7 +101,7 @@ const Formular = () => {
           </button>
         </div>
       </form>
-    </>
+    </motion.div>
   );
 };
 

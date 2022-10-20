@@ -8,12 +8,16 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
-
+import { motion } from "framer-motion";
 const FormularEins = () => {
   const [move, setMove] = useState(false);
   const navigate = useNavigate();
   return (
-    <>
+    <motion.div
+      initial={{ width: 0 }}
+      animate={{ width: "100vw" }}
+      exit={{ x: "window.innerWidth", transition: { duration: 0.1 } }}
+    >
       <h1>Berufserfahrung </h1>
       <h3>Geben Sie Ihre letzten 3 Berufserfahrungen an.</h3>
       <form>
@@ -94,7 +98,13 @@ const FormularEins = () => {
             </span>
           </button>
 
-          <button class="cta we">
+          <button
+            class="cta we"
+            onClick={() => {
+              const nav = () => navigate("/formular2");
+              nav();
+            }}
+          >
             <span>
               {" "}
               Weiter
@@ -104,7 +114,7 @@ const FormularEins = () => {
           </button>
         </div>
       </form>
-    </>
+    </motion.div>
   );
 };
 

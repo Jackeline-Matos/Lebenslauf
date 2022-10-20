@@ -15,6 +15,8 @@ function App() {
         <Route path="/" element={<Startseite />} />
         <Route path="/templates" element={<Templates />}></Route>
         <Route path="/formular" element={<Formular />} />
+        <Route path="/formular1" element={<FormularEins />} />
+        <Route path="/formular2" element={<FormularZwei />} />
         <Route path="/formular/:template" element={<Lebenslauf />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
