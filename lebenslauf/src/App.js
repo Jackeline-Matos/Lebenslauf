@@ -13,7 +13,7 @@ function App() {
   const location = useLocation();
   const user = useState({
     template: "",
-    name: "Hans",
+    name: "",
     vorname: "",
     born: "",
     alter: "",
