@@ -1,8 +1,12 @@
 import { motion } from "framer-motion";
 import "./FormularZwei.css";
 import { useState } from "react";
+import { useContext } from "react";
+import UserContext from "../context/UserContext";
 const FormularZwei = () => {
   const [option, setOptions] = useState("Bachelor");
+  const [user, setUser] = useContext(UserContext);
+  console.log(user);
   return (
     <motion.div
       initial={{ width: 0 }}
