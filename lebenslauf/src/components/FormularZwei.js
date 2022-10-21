@@ -23,7 +23,7 @@ const FormularZwei = () => {
   }, []);
 
   const haendleSubmit = (event) => {
-    event.preventDeafult();
+    event.preventDefault();
     navigate("/");
   };
   return (
@@ -170,7 +170,7 @@ const FormularZwei = () => {
           </button>
         </div> */}
 
-        <button className="buttonformular2">
+        <button className="buttonformular2" type="submit">
           <div className="svg-wrapper-1">
             <div className="svg-wrapper">
               <svg
