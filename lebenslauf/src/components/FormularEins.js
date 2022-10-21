@@ -1,6 +1,6 @@
 import "./Formular.css";
 import "./FormularEins.css";
-import { useNavigate } from "react-router-dom";
+import { renderMatches, useNavigate } from "react-router-dom";
 import {
   faArrowLeft,
   faArrowRight,
@@ -25,7 +25,7 @@ const FormularEins = () => {
   useEffect(() => {
     localStorage.setItem("data", JSON.stringify(user));
   }, [user]);
-
+  const [value, setValue] = useState(false);
   const [move, setMove] = useState(false);
   const navigate = useNavigate();
 
@@ -34,6 +34,7 @@ const FormularEins = () => {
     const nav = () => navigate("/formular2");
     nav();
   };
+
   return (
     <motion.div
       initial={{ width: 0 }}
@@ -86,7 +87,9 @@ const FormularEins = () => {
             />
           </div>
         </div>
-
+        <label htmlFor="mehr">Weiteres Unternehmen hinzufügen</label>
+        <input type="checkbox" onChange={(e) => setValue(e.target.checked)} />
+        {value ? <input type="text" /> : null}
         <div className="zeile">
           <div className="flex-eins">
             <label>Von</label>
