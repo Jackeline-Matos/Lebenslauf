@@ -1,6 +1,6 @@
 body {
 }
-.box {
+.boxZwei {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,7 +9,7 @@ body {
   width: 100vw;
 }
 
-.box div {
+.boxZwei div {
   width: 35vw;
   height: 95vh;
 

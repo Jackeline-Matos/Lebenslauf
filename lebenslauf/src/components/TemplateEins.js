@@ -1,8 +1,9 @@
+import "./TemplateEins.css";
 const TemplateEins = () => {
   return (
     <>
       {" "}
-      <div class="box">
+      <div class="boxEins">
         <div></div>
       </div>
     </>

@@ -1,7 +1,8 @@
+import "./TemplateDrei.css";
 const TemplateDrei = () => {
   return (
     <>
-      <div class="box">
+      <div class="boxDrei">
         <div></div>
       </div>
     </>
