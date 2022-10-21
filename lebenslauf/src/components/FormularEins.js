@@ -89,90 +89,216 @@ const FormularEins = () => {
         </div>
         <label htmlFor="mehr">Weiteres Unternehmen hinzufügen</label>
         <input type="checkbox" onChange={(e) => setValue(e.target.checked)} />
-        {value ? <input type="text" /> : null}
+
+        {value ? (
+          <>
+            <div className="zeile">
+              <div className="flex-eins">
+                <label>Von</label>
+                <input
+                  type="date"
+                  id="startEins"
+                  value={user.date}
+                  onChange={(e) => setUser({ ...user, date: e.target.value })}
+                />
+              </div>
+
+              <div className="flex-eins">
+                <label htmlFor="endEins">Bis</label>
+                <input
+                  type="date"
+                  id="endEins"
+                  value={user.endEins}
+                  onChange={(e) =>
+                    setUser({ ...user, endEins: e.target.value })
+                  }
+                />
+              </div>
+              <div className="flex">
+                <label htmlFor="unternehmenEins">Unternehmen</label>
+                <input
+                  type="text"
+                  id="unternehmenEins"
+                  value={user.unternehmenEins}
+                  onChange={(e) =>
+                    setUser({ ...user, unternehmenEins: e.target.value })
+                  }
+                />
+              </div>
+              <div className="flex">
+                <label htmlFor="positionEins">Position</label>
+                <input
+                  type="text"
+                  id="positionEins"
+                  value={user.positionEins}
+                  onChange={(e) =>
+                    setUser({ ...user, positionEins: e.target.value })
+                  }
+                />
+              </div>
+            </div>
+
+            <div className="zeile">
+              <div className="flex-eins">
+                <label>Von</label>
+                <input
+                  type="date"
+                  id="startZwei"
+                  value={user.startZwei}
+                  onChange={(e) =>
+                    setUser({ ...user, startZwei: e.target.value })
+                  }
+                />
+              </div>
+
+              <div className="flex-eins">
+                <label>Bis</label>
+                <input
+                  type="date"
+                  id="endZwei"
+                  value={user.endZwei}
+                  onChange={(e) =>
+                    setUser({ ...user, endZwei: e.target.value })
+                  }
+                />
+              </div>
+              <div className="flex">
+                <label htmlFor="unternehmen">Unternehmen</label>
+                <input
+                  type="text"
+                  id="unternehmenZwei"
+                  value={user.unternehmenZwei}
+                  onChange={(e) =>
+                    setUser({ ...user, unternehmenZwei: e.target.value })
+                  }
+                />
+              </div>
+              <div className="flex">
+                <label htmlFor="position">Position</label>
+                <input
+                  type="text"
+                  id="positionZwei"
+                  value={user.positionZwei}
+                  onChange={(e) =>
+                    setUser({ ...user, positionZwei: e.target.value })
+                  }
+                />
+              </div>
+            </div>
+          </>
+        ) : null}
+        <h2>Schulbildung</h2>
         <div className="zeile">
-          <div className="flex-eins">
-            <label>Von</label>
+          <div className="flex">
+            <label htmlFor="ausbildung">Schulform</label>
             <input
-              type="date"
-              id="startEins"
-              value={user.date}
-              onChange={(e) => setUser({ ...user, date: e.target.value })}
+              type="text"
+              id="ausbildung"
+              value={user.ausbildung}
+              onChange={(e) => setUser({ ...user, ausbildung: e.target.value })}
+            />
+          </div>
+          <div className="flex">
+            <label htmlFor="schule">Schule</label>
+            <input
+              type="text"
+              id="schule"
+              value={user.schule}
+              onChange={(e) => setUser({ ...user, schule: e.target.value })}
             />
           </div>
 
           <div className="flex-eins">
-            <label htmlFor="endEins">Bis</label>
+            <label htmlFor="end-schule">bis</label>
             <input
               type="date"
-              id="endEins"
-              value={user.endEins}
-              onChange={(e) => setUser({ ...user, endEins: e.target.value })}
-            />
-          </div>
-          <div className="flex">
-            <label htmlFor="unternehmenEins">Unternehmen</label>
-            <input
-              type="text"
-              id="unternehmenEins"
-              value={user.unternehmenEins}
-              onChange={(e) =>
-                setUser({ ...user, unternehmenEins: e.target.value })
-              }
-            />
-          </div>
-          <div className="flex">
-            <label htmlFor="positionEins">Position</label>
-            <input
-              type="text"
-              id="positionEins"
-              value={user.positionEins}
-              onChange={(e) =>
-                setUser({ ...user, positionEins: e.target.value })
-              }
+              id="endSchule"
+              value={user.endSchule}
+              onChange={(e) => setUser({ ...user, endSchule: e.target.value })}
             />
           </div>
         </div>
 
         <div className="zeile">
+          <div className="flex">
+            <label htmlFor="ausbildung">Studium</label>
+            <input
+              type="text"
+              id="bachelor"
+              value={user.bachelor}
+              onChange={(e) => setUser({ ...user, bachelor: e.target.value })}
+            />
+          </div>
+          <div className="flex">
+            <label htmlFor="universitaet">Universität</label>
+            <input
+              type="text"
+              id="universitaet"
+              value={user.universitaet}
+              onChange={(e) =>
+                setUser({ ...user, universitaet: e.target.value })
+              }
+            />
+          </div>
           <div className="flex-eins">
-            <label>Von</label>
+            <label>von</label>
             <input
               type="date"
-              id="startZwei"
-              value={user.startZwei}
-              onChange={(e) => setUser({ ...user, startZwei: e.target.value })}
+              id="startUniversitat"
+              value={user.startUniversitaet}
+              onChange={(e) =>
+                setUser({ ...user, startUniversitaet: e.target.value })
+              }
             />
           </div>
 
           <div className="flex-eins">
-            <label>Bis</label>
+            <label>bis</label>
             <input
               type="date"
-              id="endZwei"
-              value={user.endZwei}
-              onChange={(e) => setUser({ ...user, endZwei: e.target.value })}
+              id="endUniversitaet"
+              value={user.endUniversitaet}
+              onChange={(e) =>
+                setUser({ ...user, endUniversitaet: e.target.value })
+              }
             />
           </div>
+        </div>
+
+        <div className="zeile formular2">
           <div className="flex">
-            <label htmlFor="unternehmen">Unternehmen</label>
+            <label>Abschluss</label>
+            <select
+              id="schuleOption"
+              value={user.schuleOption}
+              onChange={(e) =>
+                setUser({ ...user, schuleOption: e.target.value })
+              }
+            >
+              <option value={"Bachelor"}>Bachelor</option>
+              <option value={"Master"}>Master</option>
+              <option value={"Diplom"}>Diplom</option>
+            </select>
+          </div>
+          <div className="flex">
+            <label>Studiengang</label>
             <input
               type="text"
-              id="unternehmenZwei"
-              value={user.unternehmenZwei}
+              id="studiengang"
+              value={user.studiengang}
               onChange={(e) =>
-                setUser({ ...user, unternehmenZwei: e.target.value })
+                setUser({ ...user, studiengang: e.target.value })
               }
             />
           </div>
           <div className="flex">
-            <label htmlFor="position">Position</label>
+            <label>am</label>
             <input
-              type="text"
-              id="positionZwei"
-              value={user.positionZwei}
+              type="date"
+              id="endStudiengang"
+              value={user.endStudiengang}
               onChange={(e) =>
-                setUser({ ...user, positionZwei: e.target.value })
+                setUser({ ...user, endStudiengang: e.target.value })
               }
             />
           </div>

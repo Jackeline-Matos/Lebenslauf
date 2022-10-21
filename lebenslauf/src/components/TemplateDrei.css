@@ -1,0 +1,20 @@
+body {
+}
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.box div {
+  width: 35vw;
+  height: 95vh;
+
+  background-image: url("../images/Chef\ de\ Cozinha\ Currículo\ Simples\ com\ Foto\ \(5\).png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

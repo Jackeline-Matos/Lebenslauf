@@ -1,7 +1,10 @@
+import "./TemplateZwei.css";
 const TemplateZwei = () => {
   return (
     <>
-      <h1>TemplateZwei</h1>
+      <div class="box">
+        <div></div>
+      </div>
     </>
   );
 };

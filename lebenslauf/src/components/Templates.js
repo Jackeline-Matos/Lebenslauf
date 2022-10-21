@@ -1,6 +1,6 @@
 import "./Templates.css";
 import curricolo from "../images/Chef de Cozinha Currículo Simples com Foto (1).png";
-import curricoloEins from "../images/Chef de Cozinha Currículo Simples com Foto.png";
+import curricoloEins from "../images/Chef de Cozinha Currículo Simples com Foto (6).png";
 import curricoloZwei from "../images/Chef de Cozinha Currículo Simples com Foto (4).png";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";

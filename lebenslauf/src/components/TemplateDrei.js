@@ -1,7 +1,9 @@
 const TemplateDrei = () => {
   return (
     <>
-      <h1>TemplateDrei</h1>
+      <div class="box">
+        <div></div>
+      </div>
     </>
   );
 };
