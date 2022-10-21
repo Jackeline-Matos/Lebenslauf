@@ -24,7 +24,11 @@ const FormularZwei = () => {
 
   const haendleSubmit = (event) => {
     event.preventDefault();
-    navigate("/");
+    user.template === 1
+      ? navigate("/templateeins")
+      : user.template === 2
+      ? navigate("/templatezwei")
+      : navigate("/templatedrei");
   };
   return (
     <motion.div
@@ -93,7 +97,7 @@ const FormularZwei = () => {
             <input
               type="text"
               id="universitaet"
-              value={user.univesitaet}
+              value={user.universitaet}
               onChange={(e) =>
                 setUser({ ...user, universitaet: e.target.value })
               }
@@ -144,7 +148,7 @@ const FormularZwei = () => {
             <input
               type="text"
               id="studiengang"
-              value={user.studiegang}
+              value={user.studiengang}
               onChange={(e) =>
                 setUser({ ...user, studiengang: e.target.value })
               }

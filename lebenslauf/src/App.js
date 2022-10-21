@@ -71,7 +71,7 @@ function App() {
           <Route path="/formular" element={<Formular />} />
           <Route path="/formular1" element={<FormularEins />} />
           <Route path="/formular2" element={<FormularZwei />} />
-          <Route path="/formular/:template" element={<Lebenslauf />} />
+          <Route path="/formular" element={<Lebenslauf />} />
           <Route path="/templateeins" element={<TemplateEins />} />
           <Route path="/templatezwei" element={<TemplateZwei />} />
           <Route path="/templatedrei" element={<TemplateDrei />} />
