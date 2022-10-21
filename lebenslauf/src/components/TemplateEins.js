@@ -1,5 +1,5 @@
 const TemplateEins = () => {
-  return <></>;
+  return <>TemplateEins</>;
 };
 
 export default TemplateEins;
