@@ -40,7 +40,7 @@ const FormularEins = () => {
       animate={{ width: "100vw" }}
       exit={{ x: "window.innerWidth", transition: { duration: 0.1 } }}
     >
-      <h1>Berufserfahrung </h1>
+      <h2>Berufserfahrung </h2>
       <h3>Geben Sie Ihre letzten 3 Berufserfahrungen an.</h3>
       <form onSubmit={submitHaendler}>
         <div className="zeile">
