@@ -94,7 +94,12 @@ const Formular = () => {
           </div>
           <div className="flex">
             <label htmlFor="hausnummer">Hausnummer</label>
-            <input type="number" id="hausnummer" />
+            <input
+              type="number"
+              id="hausnummer"
+              value={user.hausnummer}
+              onChange={(e) => setUser({ ...user, hausnummer: e.target.value })}
+            />
           </div>
         </div>
         <div className="zeile">

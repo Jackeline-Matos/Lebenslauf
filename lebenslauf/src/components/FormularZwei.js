@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import "./FormularZwei.css";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import UserContext from "../context/UserContext";
 import { useNavigate } from "react-router-dom";
 import {
@@ -13,6 +13,15 @@ const FormularZwei = () => {
   const navigate = useNavigate();
   const [user, setUser] = useContext(UserContext);
   console.log(user);
+
+  useEffect(() => {
+    const userData = JSON.parse(localStorage.getItem("data"));
+
+    if (userData) {
+      setUser(userData);
+    }
+  }, []);
+
   const haendleSubmit = (event) => {
     event.preventDeafult();
     navigate("/");
@@ -80,10 +89,10 @@ const FormularZwei = () => {
             />
           </div>
           <div className="flex">
-            <label htmlFor="universitat">Universität</label>
+            <label htmlFor="universitaet">Universität</label>
             <input
               type="text"
-              id="universitat"
+              id="universitaet"
               value={user.univesitaet}
               onChange={(e) =>
                 setUser({ ...user, universitaet: e.target.value })

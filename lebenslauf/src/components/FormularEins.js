@@ -100,7 +100,12 @@ const FormularEins = () => {
 
           <div className="flex-eins">
             <label htmlFor="endEins">Bis</label>
-            <input type="date" id="endEins" />
+            <input
+              type="date"
+              id="endEins"
+              value={user.endEins}
+              onChange={(e) => setUser({ ...user, endEins: e.target.value })}
+            />
           </div>
           <div className="flex">
             <label htmlFor="unternehmenEins">Unternehmen</label>
