@@ -5,6 +5,9 @@ import FormularEins from "./components/FormularEins";
 import FormularZwei from "./components/FormularZwei";
 import Startseite from "./components/Startseite";
 import Templates from "./components/Templates";
+import TemplateEins from "./components/TemplateEins";
+import TemplateZwei from "./components/TemplateZwei";
+import TemplateDrei from "./components/TemplateDrei";
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import UserContext from "./context/UserContext";
@@ -69,6 +72,9 @@ function App() {
           <Route path="/formular1" element={<FormularEins />} />
           <Route path="/formular2" element={<FormularZwei />} />
           <Route path="/formular/:template" element={<Lebenslauf />} />
+          <Route path="/templateeins" element={<TemplateEins />} />
+          <Route path="/templatezwei" element={<TemplateZwei />} />
+          <Route path="/templatedrei" element={<TemplateDrei />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </AnimatePresence>
