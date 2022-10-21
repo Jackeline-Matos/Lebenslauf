@@ -217,6 +217,28 @@ const FormularEins = () => {
               onChange={(e) => setUser({ ...user, endSchule: e.target.value })}
             />
           </div>
+          <div className="flex">
+            <label htmlFor="unternehmenEins">Unternehmen</label>
+            <input
+              type="text"
+              id="unternehmenEins"
+              value={user.unternehmenEins}
+              onChange={(e) =>
+                setUser({ ...user, unternehmenEins: e.target.value })
+              }
+            />
+          </div>
+          <div className="flex">
+            <label htmlFor="positionEins">Position</label>
+            <input
+              type="text"
+              id="positionEins"
+              value={user.positionEins}
+              onChange={(e) =>
+                setUser({ ...user, positionEins: e.target.value })
+              }
+            />
+          </div>
         </div>
 
         <div className="zeile">
