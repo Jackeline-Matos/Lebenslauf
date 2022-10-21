@@ -161,7 +161,7 @@ const FormularZwei = () => {
           </button>
         </div> */}
 
-        <button className="buttonFormular2">
+        <button className="buttonformular2">
           <div className="svg-wrapper-1">
             <div className="svg-wrapper">
               <svg
