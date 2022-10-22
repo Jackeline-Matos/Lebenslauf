@@ -13,6 +13,7 @@ import { AnimatePresence } from "framer-motion";
 import UserContext from "./context/UserContext";
 import { useState } from "react";
 import { useEffect } from "react";
+
 function App() {
   const location = useLocation();
   const user = useState({
@@ -27,20 +28,15 @@ function App() {
     stadt: "",
     mail: "",
     tel: "",
-    start: "",
-    end: "",
-    unternehmen: "",
-    stellen: "",
-    startEins: "",
-    endEins: "",
-    unternehmenEins: "",
-    stellenEins: "",
-    startZwei: "",
-    endZwei: "",
-    unternehmenZwei: "",
-    stellenZwei: "",
+    beruf: [
+      { start: "", end: "", unternehmen: "", stellen: "" },
+      { start: "", end: "", unternehmen: "", stellen: "" },
+      { start: "", end: "", unternehmen: "", stellen: "" },
+    ],
+
     ausbildung: "",
     schule: "",
+    startSchule: "",
     endSchule: "",
     bachelor: "",
     universitaet: "",

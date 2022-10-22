@@ -1,30 +1,32 @@
-  * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-h2{
+h2 {
   margin-top: 3rem;
 }
-.cta.zu.sch{
+.cta.zu.sch {
   position: absolute;
-  top:2rem;
+  top: 2rem;
   right: 90px;
-  
 }
 input,
-label, 
+label,
 select {
   font-size: 1.3rem;
   padding: 0.5rem;
 }
 
-.zeile.formular2{
-  margin-bottom:2.5rem ;
+.zeile.formular2 {
+  border-top: 2px solid black;
+  width: 60vw;
 }
-
-
+.zeile.underline {
+  border-bottom: 2px solid black;
+  width: 60vw;
+}
 /* From uiverse.io by @adamgiebl */
 .buttonformular2 {
   font-family: inherit;
@@ -40,46 +42,45 @@ select {
   transition: all 0.2s;
   font-weight: 700;
   margin: auto;
+}
 
- }
- 
- .buttonformular2 span {
+.buttonformular2 span {
   display: block;
   margin-left: 0.3em;
   transition: all 0.3s ease-in-out;
-  
- }
- 
- .buttonformular2 svg {
+}
+
+.buttonformular2 svg {
   display: block;
   transform-origin: center center;
   transition: transform 0.3s ease-in-out;
- }
- 
- .buttonformular2:hover .svg-wrapper {
+}
+
+.buttonformular2:hover .svg-wrapper {
   animation: fly-1 0.6s ease-in-out infinite alternate;
- }
- 
- .buttonformular2:hover svg {
+}
+
+.buttonformular2:hover svg {
   transform: translateX(1.2em) rotate(45deg) scale(1.1);
- }
- 
- .buttonformular2:hover span {
+}
+
+.buttonformular2:hover span {
   transform: translateX(5em);
- }
- 
- .buttonformular2:active {
+}
+
+.buttonformular2:active {
   transform: scale(0.95);
- }
- 
- @keyframes fly-1 {
+}
+form {
+  margin: 4rem 2rem;
+}
+
+@keyframes fly-1 {
   from {
-   transform: translateY(0.1em);
+    transform: translateY(0.1em);
   }
- 
+
   to {
-   transform: translateY(-0.1em);
+    transform: translateY(-0.1em);
   }
- }
- 
- 
+}

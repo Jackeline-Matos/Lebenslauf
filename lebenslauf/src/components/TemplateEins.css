@@ -1,4 +1,8 @@
-body {
+@import "../fonts/fontKhand.css";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 .boxEins {
   display: flex;
@@ -9,12 +13,25 @@ body {
   width: 100vw;
 }
 
-.boxEins div {
-  width: 35vw;
+.boxEins .innerBoxEins {
+  width: fit-content;
   height: 95vh;
 
   background-image: url("../images/hintergrundTemplate.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.hTemplateEins {
+  font-family: "Barlow Condensed", sans-serif;
+  margin-top: 0;
+  padding: 0.6rem 1rem;
+}
+/* .block_1 {
+  width: fit-content;
+
+} */
+.hline-bottom {
+  padding-bottom: 10px;
+  border-bottom: 2px solid #000; /* whichever color you prefer */
 }
