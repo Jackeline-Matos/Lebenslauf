@@ -70,13 +70,12 @@ const TemplateEins = () => {
                     <li>{user.tel}</li>
                   </ul>
                 </div>
-                <img
+                {/* <img
                   className="kringel"
                   src={require("../images/KringelTemplateEins.png")}
                   alt="Kringel"
-                  // width="500px"
-                  // height="500px"
-                />
+                 
+                /> */}
                 <div class="block_1 templateEins">
                   {" "}
                   <h4 className="block">Ausbildung</h4>

@@ -29,8 +29,6 @@ function App() {
     mail: "",
     tel: "",
 
-    start: "",
-    end: "",
     unternehmen: "",
     stellen: "",
     startEins: "",
@@ -42,24 +40,44 @@ function App() {
     unternehmenZwei: "",
     stellenZwei: "",
 
+    schulForm: "",
+    schule: "",
+    startSchule: "",
+    endSchule: "",
+
+    mittlereSchulreife: "",
+    start: "",
+    end: "",
+
+    fachRichtung: "",
+
+    mittlereSchule: "",
+    startMittlereSchule: "",
+    endMittlereSchule: "",
+
+    bildungsNiveau: "",
+
     ausbildung: "",
     ausbildungsStaette: "",
     startAusbildung: "",
     endAusbildung: "",
-    schule: "",
-    startSchule: "",
-    endSchule: "",
-    bachelor: "",
-    universitaet: "",
-    startUniversitaet: "",
-    endUniersitaet: "",
-    schuleOption: "",
+
+    uniAbschluss: "",
     studiengang: "",
+    universitaet: "",
+    startStudiengang: "",
     endStudiengang: "",
+
+    bachelor: "",
+    universitaetBachelor: "",
+    studiengangBachelor: "",
+    startUniversitaetBachelor: "",
+    endUniversitaetBachelor: "",
+
+    hobbies: "",
 
     value: false,
     valueEins: false,
-    schulForm: "",
 
     sprache: "",
     niveau: "",
