@@ -148,7 +148,9 @@ const FormularEins = () => {
           <div className="flex-eins">
             <label htmlFor="startSchule">von</label>
             <input
-              type="date"
+              type="number"
+              min="1990"
+              max="2022"
               id="startSchule"
               value={user.startUniversitaet}
               onChange={(e) =>
@@ -159,7 +161,9 @@ const FormularEins = () => {
           <div className="flex-eins">
             <label htmlFor="end-schule">bis</label>
             <input
-              type="date"
+              type="number"
+              min="1990"
+              max="2022"
               id="endSchule"
               value={user.endSchule}
               onChange={(e) => setUser({ ...user, endSchule: e.target.value })}
@@ -194,7 +198,9 @@ const FormularEins = () => {
               <div className="flex-eins">
                 <label htmlFor="startMittlereSchule">von</label>
                 <input
-                  type="date"
+                  type="number"
+                  min="1990"
+                  max="2022"
                   id="startMittlereSchule"
                   value={user.startMitlereSchule}
                   onChange={(e) =>
@@ -205,7 +211,9 @@ const FormularEins = () => {
               <div className="flex-eins">
                 <label htmlFor="endMittlereschule">bis</label>
                 <input
-                  type="date"
+                  type="number"
+                  min="1990"
+                  max="2022"
                   id="endMittlereSchule"
                   value={user.endMittlereSchule}
                   onChange={(e) =>
@@ -244,7 +252,9 @@ const FormularEins = () => {
               <div className="flex-eins">
                 <label htmlFor="startMittlereSchule">von</label>
                 <input
-                  type="date"
+                  type="number"
+                  min="1990"
+                  max="2022"
                   id="startMittlereSchule"
                   value={user.startMitlereSchule}
                   onChange={(e) =>
@@ -256,7 +266,7 @@ const FormularEins = () => {
                 <label htmlFor="endMittlereschule">bis</label>
                 <input
                   type="number"
-                  min="1980"
+                  min="1990"
                   max="2022"
                   id="endMittlereSchule"
                   value={user.endMittlereSchule}
@@ -312,7 +322,9 @@ const FormularEins = () => {
               <div className="flex-eins">
                 <label>von</label>
                 <input
-                  type="date"
+                  type="number"
+                  min="1990"
+                  max="2022"
                   id="startUniversitat"
                   value={user.startAusbildung}
                   onChange={(e) =>
@@ -324,7 +336,9 @@ const FormularEins = () => {
               <div className="flex-eins">
                 <label>bis</label>
                 <input
-                  type="date"
+                  type="number"
+                  min="1990"
+                  max="2022"
                   id="endUniversitaet"
                   value={user.endAusbildung}
                   onChange={(e) =>
@@ -381,7 +395,9 @@ const FormularEins = () => {
               <div className="flex-eins">
                 <label>von</label>
                 <input
-                  type="date"
+                  type="number"
+                  min="1990"
+                  max="2022"
                   id="startStudiengang"
                   value={user.startStudiengang}
                   onChange={(e) =>
@@ -392,7 +408,9 @@ const FormularEins = () => {
               <div className="flex-eins">
                 <label>bis</label>
                 <input
-                  type="date"
+                  type="number"
+                  min="1990"
+                  max="2022"
                   id="endStudiengang"
                   value={user.endStudiengang}
                   onChange={(e) =>
@@ -445,7 +463,9 @@ const FormularEins = () => {
               <div className="flex-eins">
                 <label>von</label>
                 <input
-                  type="date"
+                  type="number"
+                  min="1990"
+                  max="2022"
                   id="startUniversitatBachelor"
                   value={user.startUniversitaet}
                   onChange={(e) =>
@@ -460,7 +480,9 @@ const FormularEins = () => {
               <div className="flex-eins">
                 <label>bis</label>
                 <input
-                  type="date"
+                  type="number"
+                  min="1990"
+                  max="2022"
                   id="endUniversitaet"
                   value={user.endUniversitaetBachelor}
                   onChange={(e) =>

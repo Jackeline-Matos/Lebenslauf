@@ -6,25 +6,6 @@ const FormularTeil = () => {
   return (
     <>
       <div className="zeile">
-        <div className="flex-eins">
-          <label>Von</label>
-          <input
-            type="date"
-            id="startEins"
-            value={user.startEins}
-            onChange={(e) => setUser({ ...user, startEins: e.target.value })}
-          />
-        </div>
-
-        <div className="flex-eins">
-          <label htmlFor="endEins">Bis</label>
-          <input
-            type="date"
-            id="endEins"
-            value={user.endEins}
-            onChange={(e) => setUser({ ...user, endEins: e.target.value })}
-          />
-        </div>
         <div className="flex">
           <label htmlFor="unternehmenEins">Unternehmen</label>
           <input
@@ -45,28 +26,28 @@ const FormularTeil = () => {
             onChange={(e) => setUser({ ...user, stellenEins: e.target.value })}
           />
         </div>
-      </div>
-
-      <div className="zeile">
         <div className="flex-eins">
           <label>Von</label>
           <input
             type="date"
-            id="startZwei"
-            value={user.startZwei}
-            onChange={(e) => setUser({ ...user, startZwei: e.target.value })}
+            id="startEins"
+            value={user.startEins}
+            onChange={(e) => setUser({ ...user, startEins: e.target.value })}
           />
         </div>
 
         <div className="flex-eins">
-          <label>Bis</label>
+          <label htmlFor="endEins">Bis</label>
           <input
             type="date"
-            id="endZwei"
-            value={user.endZwei}
-            onChange={(e) => setUser({ ...user, endZwei: e.target.value })}
+            id="endEins"
+            value={user.endEins}
+            onChange={(e) => setUser({ ...user, endEins: e.target.value })}
           />
         </div>
+      </div>
+
+      <div className="zeile">
         <div className="flex">
           <label htmlFor="unternehmen">Unternehmen</label>
           <input
@@ -85,6 +66,25 @@ const FormularTeil = () => {
             id="positionZwei"
             value={user.stellenZwei}
             onChange={(e) => setUser({ ...user, stellenZwei: e.target.value })}
+          />
+        </div>
+        <div className="flex-eins">
+          <label>Von</label>
+          <input
+            type="date"
+            id="startZwei"
+            value={user.startZwei}
+            onChange={(e) => setUser({ ...user, startZwei: e.target.value })}
+          />
+        </div>
+
+        <div className="flex-eins">
+          <label>Bis</label>
+          <input
+            type="date"
+            id="endZwei"
+            value={user.endZwei}
+            onChange={(e) => setUser({ ...user, endZwei: e.target.value })}
           />
         </div>
       </div>
