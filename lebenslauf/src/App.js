@@ -56,9 +56,14 @@ function App() {
     schuleOption: "",
     studiengang: "",
     endStudiengang: "",
+
     value: false,
     valueEins: false,
     schulForm: "",
+
+    sprache: "",
+    niveau: "",
+    item: "",
   });
   const beruf = useState(
     { start: "", end: "", unternehmen: "", stellen: "" },
