@@ -12,7 +12,7 @@ import { motion } from "framer-motion";
 import UserContext from "../context/UserContext";
 import { useContext, useEffect } from "react";
 import FormularTeil from "./FormularTeil";
-
+import TeilRendern from "./TeilRendern";
 const FormularEins = () => {
   const [user, setUser] = useContext(UserContext);
   useEffect(() => {
@@ -26,7 +26,7 @@ const FormularEins = () => {
   useEffect(() => {
     localStorage.setItem("data", JSON.stringify(user));
   }, [user]);
-  const [value, setValue] = useState(false);
+  // const [value, setValue] = useState(false);
   const [move, setMove] = useState(false);
   const navigate = useNavigate();
 
@@ -53,7 +53,7 @@ const FormularEins = () => {
             <input
               type="date"
               id="start"
-              value={user.beruf[0].start}
+              value={user.start}
               onChange={(e) => setUser({ ...user, start: e.target.value })}
             />
           </div>
@@ -63,7 +63,7 @@ const FormularEins = () => {
             <input
               type="date"
               id="end"
-              value={user.beruf[0].end}
+              value={user.end}
               onChange={(e) => setUser({ ...user, end: e.target.value })}
             />
           </div>
@@ -73,7 +73,7 @@ const FormularEins = () => {
             <input
               type="text"
               id="unternehmen"
-              value={user.beruf[0].unternehmen}
+              value={user.unternehmen}
               onChange={(e) =>
                 setUser({ ...user, unternehmen: e.target.value })
               }
@@ -85,34 +85,51 @@ const FormularEins = () => {
             <input
               type="text"
               id="position"
-              value={user.beruf[0].position}
-              onChange={(e) => setUser({ ...user, position: e.target.value })}
+              value={user.stellen}
+              onChange={(e) => setUser({ ...user, stellen: e.target.value })}
             />
           </div>
         </div>
         <label htmlFor="mehr">Weiteres Unternehmen hinzufügen</label>
-        <input type="checkbox" onChange={(e) => setValue(e.target.checked)} />
+        <input
+          type="checkbox"
+          onChange={(e) => setUser({ ...user, value: e.target.checked })}
+        />
 
-        {value ? (
+        {user.value ? (
           <>
             {" "}
-            <FormularTeil value={value} setValue={setValue} />{" "}
+            <FormularTeil />{" "}
+            <label htmlFor="mehr">Weiteres Unternehmen hinzufügen</label>
+            <input
+              type="checkbox"
+              onChange={(e) => {
+                setUser({ ...user, valueEins: e.target.checked });
+              }}
+            />
           </>
         ) : null}
 
+        {/* {user.valueEins ? (
+          <>
+            {" "}
+            <FormularTeil />{" "}
+          </>
+        ) : null} */}
         <h2>Schulbildung</h2>
         <div className="zeile formular2">
           <div className="flex">
-            <label htmlFor="ausbildung">Höchste Schulabschluss</label>
+            <label htmlFor="schuleOption">Höchste Schulabschluss</label>
             <select
               id="schuleOption"
-              value={user.schule}
-              onChange={(e) => setUser({ ...user, schule: e.target.value })}
+              value={user.schulForm}
+              onChange={(e) => setUser({ ...user, schulForm: e.target.value })}
             >
               <option value={"Abitur"}>Abitur</option>
               <option value={"Mittlere Reife"}>Mittlere Reife</option>
               <option value={"Hauptschule"}>Hauptschule</option>
             </select>
+
             {/* <input
               type="text"
               id="ausbildung"
@@ -120,6 +137,24 @@ const FormularEins = () => {
               onChange={(e) => setUser({ ...user, ausbildung: e.target.value })}
             /> */}
           </div>
+          {user.schulForm === "Abitur" ? (
+            <div className="zeile formular2">
+              <div className="flex">
+                <label htmlFor="schuleOption"></label>
+                <select
+                  id="schuleOption"
+                  value={user.schulForm}
+                  onChange={(e) =>
+                    setUser({ ...user, schulForm: e.target.value })
+                  }
+                >
+                  <option value={"Abitur"}>Abitur</option>
+                  <option value={"Mittlere Reife"}>Mittlere Reife</option>
+                  <option value={"Hauptschule"}>Hauptschule</option>
+                </select>
+              </div>
+            </div>
+          ) : null}
           <div className="flex">
             <label htmlFor="schule">Schule</label>
             <input
@@ -248,12 +283,12 @@ const FormularEins = () => {
         </div>
         <div className="zeile">
           <div className="flex">
-            <label htmlFor="studium">Ausbildung</label>
+            <label htmlFor="ausbildung">Ausbildung</label>
             <input
               type="text"
-              id="bachelor"
-              value={user.bachelor}
-              onChange={(e) => setUser({ ...user, bachelor: e.target.value })}
+              id="ausbildung"
+              value={user.ausbildung}
+              onChange={(e) => setUser({ ...user, ausbildung: e.target.value })}
             />
           </div>
           <div className="flex">
@@ -261,9 +296,9 @@ const FormularEins = () => {
             <input
               type="text"
               id="universitaet"
-              value={user.universitaet}
+              value={user.ausbildungsStaette}
               onChange={(e) =>
-                setUser({ ...user, universitaet: e.target.value })
+                setUser({ ...user, ausbildungsStaette: e.target.value })
               }
             />
           </div>
@@ -272,9 +307,9 @@ const FormularEins = () => {
             <input
               type="date"
               id="startUniversitat"
-              value={user.startUniversitaet}
+              value={user.startAusbildung}
               onChange={(e) =>
-                setUser({ ...user, startUniversitaet: e.target.value })
+                setUser({ ...user, startAusbildung: e.target.value })
               }
             />
           </div>
@@ -284,9 +319,9 @@ const FormularEins = () => {
             <input
               type="date"
               id="endUniversitaet"
-              value={user.endUniversitaet}
+              value={user.endAusbildung}
               onChange={(e) =>
-                setUser({ ...user, endUniversitaet: e.target.value })
+                setUser({ ...user, endAusbildung: e.target.value })
               }
             />
           </div>

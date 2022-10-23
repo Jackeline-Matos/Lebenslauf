@@ -28,13 +28,24 @@ function App() {
     stadt: "",
     mail: "",
     tel: "",
-    beruf: [
-      { start: "", end: "", unternehmen: "", stellen: "" },
-      { start: "", end: "", unternehmen: "", stellen: "" },
-      { start: "", end: "", unternehmen: "", stellen: "" },
-    ],
+
+    start: "",
+    end: "",
+    unternehmen: "",
+    stellen: "",
+    startEins: "",
+    endEins: "",
+    unternehmenEins: "",
+    stellenEins: "",
+    startZwei: "",
+    endZwei: "",
+    unternehmenZwei: "",
+    stellenZwei: "",
 
     ausbildung: "",
+    ausbildungsStaette: "",
+    startAusbildung: "",
+    endAusbildung: "",
     schule: "",
     startSchule: "",
     endSchule: "",
@@ -45,8 +56,15 @@ function App() {
     schuleOption: "",
     studiengang: "",
     endStudiengang: "",
+    value: false,
+    valueEins: false,
+    schulForm: "",
   });
-
+  const beruf = useState(
+    { start: "", end: "", unternehmen: "", stellen: "" },
+    { start: "", end: "", unternehmen: "", stellen: "" },
+    { start: "", end: "", unternehmen: "", stellen: "" }
+  );
   // useEffect(() => {
   //   const cartItemsData = JSON.parse(localStorage.getItem('cartItems'))
 

@@ -21,7 +21,9 @@ const FormularZwei = () => {
       setUser(userData);
     }
   }, []);
-
+  useEffect(() => {
+    localStorage.setItem("data", JSON.stringify(user));
+  }, [user]);
   const haendleSubmit = (event) => {
     event.preventDefault();
     user.template === 1

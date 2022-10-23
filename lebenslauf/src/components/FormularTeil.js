@@ -1,6 +1,7 @@
 import UserContext from "../context/UserContext";
 import { useContext } from "react";
-const FormularTeil = (value, setValue) => {
+
+const FormularTeil = () => {
   const [user, setUser] = useContext(UserContext);
   return (
     <>
@@ -10,8 +11,8 @@ const FormularTeil = (value, setValue) => {
           <input
             type="date"
             id="startEins"
-            value={user.beruf[1].date}
-            onChange={(e) => setUser({ ...user, date: e.target.value })}
+            value={user.startEins}
+            onChange={(e) => setUser({ ...user, startEins: e.target.value })}
           />
         </div>
 
@@ -20,7 +21,7 @@ const FormularTeil = (value, setValue) => {
           <input
             type="date"
             id="endEins"
-            value={user.beruf[1].endEins}
+            value={user.endEins}
             onChange={(e) => setUser({ ...user, endEins: e.target.value })}
           />
         </div>
@@ -29,7 +30,7 @@ const FormularTeil = (value, setValue) => {
           <input
             type="text"
             id="unternehmenEins"
-            value={user.beruf[1].unternehmenEins}
+            value={user.unternehmenEins}
             onChange={(e) =>
               setUser({ ...user, unternehmenEins: e.target.value })
             }
@@ -40,8 +41,8 @@ const FormularTeil = (value, setValue) => {
           <input
             type="text"
             id="positionEins"
-            value={user.beruf[1].positionEins}
-            onChange={(e) => setUser({ ...user, positionEins: e.target.value })}
+            value={user.stellenEins}
+            onChange={(e) => setUser({ ...user, stellenEins: e.target.value })}
           />
         </div>
       </div>
@@ -52,7 +53,7 @@ const FormularTeil = (value, setValue) => {
           <input
             type="date"
             id="startZwei"
-            value={user.beruf[2].startZwei}
+            value={user.startZwei}
             onChange={(e) => setUser({ ...user, startZwei: e.target.value })}
           />
         </div>
@@ -62,7 +63,7 @@ const FormularTeil = (value, setValue) => {
           <input
             type="date"
             id="endZwei"
-            value={user.beruf[2].endZwei}
+            value={user.endZwei}
             onChange={(e) => setUser({ ...user, endZwei: e.target.value })}
           />
         </div>
@@ -71,7 +72,7 @@ const FormularTeil = (value, setValue) => {
           <input
             type="text"
             id="unternehmenZwei"
-            value={user.beruf[2].unternehmenZwei}
+            value={user.unternehmenZwei}
             onChange={(e) =>
               setUser({ ...user, unternehmenZwei: e.target.value })
             }
@@ -82,25 +83,11 @@ const FormularTeil = (value, setValue) => {
           <input
             type="text"
             id="positionZwei"
-            value={user.beruf[2].positionZwei}
-            onChange={(e) => setUser({ ...user, positionZwei: e.target.value })}
+            value={user.stellenZwei}
+            onChange={(e) => setUser({ ...user, stellenZwei: e.target.value })}
           />
         </div>
       </div>
-      <label htmlFor="mehr">Weiteres Unternehmen hinzufügen</label>
-      <input
-        type="checkbox"
-        onChange={(e) => {
-          setValue(value);
-          setValue(e.target.checked);
-        }}
-      />
-      {value ? (
-        <>
-          {" "}
-          <FormularTeil value={value} setValue={setValue} />{" "}
-        </>
-      ) : null}
     </>
   );
 };

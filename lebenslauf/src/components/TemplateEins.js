@@ -1,8 +1,37 @@
 import "./TemplateEins.css";
 import UserContext from "../context/UserContext";
 import { useContext } from "react";
+import { useEffect } from "react";
 const TemplateEins = () => {
   const [user, setUser] = useContext(UserContext);
+  useEffect(() => {
+    const userData = JSON.parse(localStorage.getItem("data"));
+
+    if (userData) {
+      setUser(userData);
+    }
+  }, []);
+  const beruf = [
+    {
+      start: user.start,
+      end: user.end,
+      unternehmen: user.unternehmen,
+      stellen: user.stellen,
+    },
+    {
+      start: user.startEins,
+      end: user.endEins,
+      unternehmen: user.unternehmenEins,
+      stellen: user.stellenEins,
+    },
+    {
+      start: user.startZwei,
+      end: user.endZwei,
+      unternehmen: user.unternehmenZwei,
+      stellen: user.stellenZwei,
+    },
+  ];
+  console.log(beruf);
   return (
     <>
       {" "}
@@ -13,8 +42,11 @@ const TemplateEins = () => {
           </h1>
           <div className="hauptBox">
             <div className="linkeBox">
-              <ul>
-                <li>Anschrift</li>
+              <ul className="ul">
+                <li className="strong">
+                  {" "}
+                  <strong>Anschrift</strong>{" "}
+                </li>
                 <li>
                   {user.strasse}
                   {user.hausnummer}
@@ -24,24 +56,49 @@ const TemplateEins = () => {
                   {user.stadt}
                 </li>
               </ul>
-              <ul>
-                <li>Geburtsdatum</li>
+              <ul className="ul">
+                <li className="strong">
+                  <strong>Geburtsdatum</strong>{" "}
+                </li>
                 <li>{user.born}</li>
               </ul>
-              <ul>
-                <li>{user.mail}</li>
+              <ul className="ul">
+                <li className="strong">{user.mail}</li>
                 <li>{user.tel}</li>
               </ul>
-
-              <div class="block_1 hline-bottom">
+              <img
+                className="kringel"
+                src={require("../images/KringelTemplateEins.png")}
+                alt="Kringel"
+                // width="500px"
+                // height="500px"
+              />
+              <div class="block_1 templateEins">
                 {" "}
-                <h5>Ausbildung</h5>
+                <h4 className="block">Ausbildung</h4>
               </div>
-              <ul>
-                <li>M</li>
+              <ul className="ul">
+                <li className="strong">
+                  <strong>{user.schulForm}</strong>{" "}
+                </li>
+                <li>{user.ausbildung}</li>
               </ul>
+              {beruf.map((item) => (
+                <ul className="ul">
+                  <li>{item.stellen}</li>
+                  <li>
+                    {item.start}-{item.end}
+                  </li>
+                  <li>{item.unternehmen}</li>
+                </ul>
+              ))}
             </div>
-            <div className="rechteBox"></div>
+            <div className="rechteBox">
+              <div class="block_1 templateEins">
+                {" "}
+                <h4 className="block">Kenntnisse</h4>
+              </div>
+            </div>
           </div>
         </div>
       </div>
