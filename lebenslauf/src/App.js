@@ -45,6 +45,9 @@ function App() {
     schuleOption: "",
     studiengang: "",
     endStudiengang: "",
+    sprache: "",
+    niveau: "",
+    item: "",
   });
 
   // useEffect(() => {
