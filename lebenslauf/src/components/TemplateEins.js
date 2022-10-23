@@ -97,6 +97,7 @@ const TemplateEins = () => {
               <div class="block_1 templateEins">
                 {" "}
                 <h4 className="block">Kenntnisse</h4>
+                
               </div>
             </div>
           </div>

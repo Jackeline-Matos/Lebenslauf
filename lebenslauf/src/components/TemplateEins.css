@@ -10,7 +10,7 @@
   list-style-type: none;
 }
 .boxEins {
-  display: flex;
+  display: grid;
   align-items: center;
   justify-content: center;
   align-self: center;
@@ -27,11 +27,11 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  margin: 0;
 }
 .hTemplateEins {
   font-family: "Barlow Condensed", sans-serif;
-  margin-top: 0;
-  padding: 0.6rem 1rem;
+  padding-top: 0;
 }
 /* .block_1 {
   width: fit-content;
