@@ -32,7 +32,7 @@ const FormularZwei = () => {
 
   const haendleSubmit = (event) => {
     event.preventDefault();
-    setUser({ ...user, item: [selectedOptions] });
+    setUser({ ...user, item: selectedOptions });
     user.template === 1
       ? navigate("/templateeins")
       : user.template === 2

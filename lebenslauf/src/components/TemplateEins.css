@@ -33,12 +33,16 @@
   margin-top: 0;
   padding: 0.6rem 1rem;
 }
+.rechteUndLinke {
+  display: flex;
+}
 /* .block_1 {
   width: fit-content;
 
 } */
 .hauptBox {
   display: flex;
+  flex-direction: column;
 }
 .templateEins {
   padding-bottom: 10px;
