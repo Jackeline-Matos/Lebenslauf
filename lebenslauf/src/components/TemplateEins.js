@@ -63,10 +63,13 @@ const TemplateEins = () => {
                   </li>
                   <li>{user.born}</li>
                 </ul>
-                <ul className="ul">
-                  <li className="strong">{user.mail}</li>
-                  <li>{user.tel}</li>
-                </ul>
+                <div className="mitKringel">
+                  {" "}
+                  <ul className="ul">
+                    <li className="strong">{user.mail}</li>
+                    <li>{user.tel}</li>
+                  </ul>
+                </div>
                 <img
                   className="kringel"
                   src={require("../images/KringelTemplateEins.png")}
