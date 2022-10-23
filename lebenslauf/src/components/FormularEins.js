@@ -108,9 +108,9 @@ const FormularEins = () => {
 
         <div className="zeile ">
           <div className="flex">
-            <label htmlFor="schuleForm">Höchste Schulabschluss</label>
+            <label htmlFor="schulForm">Höchste Schulabschluss</label>
             <select
-              id="schuleForm"
+              id="schulForm"
               value={user.schulForm}
               onChange={(e) => setUser({ ...user, schulForm: e.target.value })}
             >
@@ -152,9 +152,9 @@ const FormularEins = () => {
               min="1990"
               max="2022"
               id="startSchule"
-              value={user.startUniversitaet}
+              value={user.startSchule}
               onChange={(e) =>
-                setUser({ ...user, startUniversitaet: e.target.value })
+                setUser({ ...user, startSchule: e.target.value })
               }
             />
           </div>

@@ -39,7 +39,9 @@ h1{
     width: 40%;
     margin-left: 1rem;
 }
-
+.boxName h1{
+  margin: 0;
+}
 .boxCityTelEmailAlter{
     grid-column: 2/3 ;
     grid-row: 1/2 ;
@@ -70,4 +72,34 @@ h1{
 .boxStellenUnterBeruf h3{
   margin: 0;
   padding-bottom: 0.5rem;
+}
+
+.boxShulbildung{
+  grid-column: 2/3;
+  grid-row: 3/4 ;
+  margin-top: 2.5rem;
+  width: 100%;
+  font-size: 15px;
+}
+
+.boxShulbildung h3{
+  margin: 0;
+  font-size: medium;
+}
+.boxStartEndSchule, .boxStartEndUni{
+  grid-column: 1/2;
+  grid-row: 3/4;
+  margin-left: 3rem;
+  margin-top: 4.5rem;
+  font-size: x-small;
+  width: 100%;
+}
+
+.boxStartEndUni{
+  margin-top: 7.56rem;
+}
+
+.uni{
+  margin-top: .5rem;
+  font-size: 15px;
 }

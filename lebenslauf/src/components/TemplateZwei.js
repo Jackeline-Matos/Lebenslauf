@@ -64,16 +64,28 @@ const TemplateZwei = () => {
           ))}
         </div>
 
-        <div class="boxStartEndBeruf">
+        <div class="boxStartEndSchule">
           <p>
             {" "}
-            {user.start} / {user.end}
+            {user.startSchule} / {user.endSchule}
           </p>
         </div>
 
-        <div class="boxStellenUnterBeruf">
+        <div class="boxShulbildung">
           <h3>Schulbildung</h3>
-          if ({user.schulForm}) {<p></p>}
+          <p>{user.schulForm}</p>
+          <p>{user.schule}</p>
+
+          <div className="uni">
+            <p>{user.bildungsNiveau}</p>
+            <p>{user.studiengang}</p>
+          </div>
+        </div>
+        <div class="boxStartEndUni">
+          <p>
+            {" "}
+            {user.startStudiengang} / {user.endStudiengang}
+          </p>
         </div>
       </div>
     </div>
