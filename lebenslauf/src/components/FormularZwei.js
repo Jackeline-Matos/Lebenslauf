@@ -15,6 +15,8 @@ const FormularZwei = () => {
   const navigate = useNavigate();
   const [user, setUser] = useContext(UserContext);
   const [faehigkeiten, setFaehigkeiten] = useState([]);
+  const [upDate, setUpDate] = useState([]);
+  const [input, setInput] = useState("");
   console.log(user);
 
   useEffect(() => {
@@ -51,7 +53,9 @@ const FormularZwei = () => {
     { value: "sport", label: "Sport" },
     { value: "kochen", label: "Kochen" },
   ];
-
+  const handleRemoveItem = (name) => {
+    setUpDate(faehigkeiten.filter((item) => item !== name));
+  };
   return (
     <motion.div
       initial={{ width: 0 }}
@@ -80,10 +84,33 @@ const FormularZwei = () => {
             <input
               type="text"
               id="Kenntnisse"
-              onChange={(e) =>
-                setFaehigkeiten([...faehigkeiten, e.target.value])
-              }
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
             />
+            <span
+              onClick={() => {
+                setFaehigkeiten([...faehigkeiten, input]);
+                setInput("");
+              }}
+            >
+              Hinzufügen
+            </span>
+            <ul>
+              {faehigkeiten.map((item) => (
+                <>
+                  <li
+                    onClick={() => {
+                      upDate.filter((it) => it !== item);
+
+                      // console.log(selected);
+                      // setFaehigkeiten(faehigkeiten.splice(selected, 1));
+                    }}
+                  >
+                    {item} x
+                  </li>
+                </>
+              ))}
+            </ul>
           </div>
 
           <div className="flex">
