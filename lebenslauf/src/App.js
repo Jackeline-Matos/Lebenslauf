@@ -75,14 +75,19 @@ function App() {
     endUniversitaetBachelor: "",
 
     hobbies: "",
-
+    item: "",
     value: false,
     valueEins: false,
+    addLanguage: false,
 
     sprache: "",
     niveau: "",
-    item: "",
+    spracheEins: "",
+    niveauEins: "",
+    spracheZwei: "",
+    niveauZwei: "",
   });
+
   const beruf = useState(
     { start: "", end: "", unternehmen: "", stellen: "" },
     { start: "", end: "", unternehmen: "", stellen: "" },
