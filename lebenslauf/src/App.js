@@ -87,6 +87,7 @@ function App() {
     spracheZwei: "",
     niveauZwei: "",
   });
+
   const beruf = useState(
     { start: "", end: "", unternehmen: "", stellen: "" },
     { start: "", end: "", unternehmen: "", stellen: "" },

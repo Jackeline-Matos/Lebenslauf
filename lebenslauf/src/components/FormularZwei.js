@@ -14,6 +14,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const FormularZwei = () => {
   const navigate = useNavigate();
   const [user, setUser] = useContext(UserContext);
+  const [faehigkeiten, setFaehigkeiten] = useState([]);
   console.log(user);
 
   useEffect(() => {
@@ -71,49 +72,18 @@ const FormularZwei = () => {
         </span>
       </button>
       <form onSubmit={haendleSubmit}>
-        <div className="zeile underline">
-          <h2>Hobbies </h2>
-        </div>
-        <div>
-          <Select
-            className="hobbies"
-            isMulti
-            id="hobbies"
-            options={hobbiesOptions}
-            isSearchable={true}
-            isDisabled={false}
-            isLoading={false}
-            isRtl={false}
-            closeMenuOnSelect={false}
-            onChange={(item) => setSelectedOptions(item)}
-          />
-        </div>
-
-        <h2>Sprachkenntnisse</h2>
+        <h2>Kenntnisse</h2>
         <div className="zeile ">
           <div className="flex sprache">
-            <label htmlFor="ausbildung">Sprache</label>
+            <label htmlFor="ausbildung">Kenntnisse</label>
 
-            <select
-              id="sprache"
-              value={user.sprache}
-              onChange={(e) => setUser({ ...user, sprache: e.target.value })}
-            >
-              <option value={"Albanisch"}> Albanisch</option>
-              <option value={"Arabisch"}> Arabisch</option>
-              <option value={"Dänisch"}> Dänisch</option>
-              <option value={"Deutsch"}> Deutsch</option>
-              <option value={"Englisch"}> Englisch</option>
-              <option value={"Französisch"}> Französisch</option>
-              <option value={"Griechisch"}> Griechisch</option>
-              <option value={"Italienisch"}> Italienisch</option>
-              <option value={"Japanisch"}> Japanisch</option>
-              <option value={"Niederländisch"}> Niederländisch</option>
-              <option value={"Portugiesisch"}> Portugiesisch</option>
-              <option value={"Russisch"}> Russisch</option>
-              <option value={"Spanisch"}> Spanisch</option>
-              <option value={"Türkisch"}> Türkisch</option>
-            </select>
+            <input
+              type="text"
+              id="Kenntnisse"
+              onChange={(e) =>
+                setFaehigkeiten([...faehigkeiten, e.target.value])
+              }
+            />
           </div>
 
           <div className="flex">
@@ -132,7 +102,7 @@ const FormularZwei = () => {
             </select>
           </div>
         </div>
-        <div className="zeile ">
+        <div className="zeile margin">
           <label htmlFor="languages">Add other languages</label>
           <input
             type="checkbox"
@@ -219,7 +189,7 @@ const FormularZwei = () => {
                 </select>
               </div>
 
-              <div className="flex">
+              <div className="flex margin">
                 <label htmlFor="ausbildung">Niveau</label>
 
                 <select
@@ -240,7 +210,176 @@ const FormularZwei = () => {
           </>
         )}
 
-        <button className="buttonformular2" type="submit">
+        <div className="zeile underline">
+          <h2>Hobbies </h2>
+        </div>
+        <div>
+          <Select
+            className="hobbies"
+            isMulti
+            id="hobbies"
+            options={hobbiesOptions}
+            isSearchable={true}
+            isDisabled={false}
+            isLoading={false}
+            isRtl={false}
+            closeMenuOnSelect={false}
+            onChange={(item) => setSelectedOptions(item)}
+          />
+        </div>
+
+        <h2>Sprachkenntnisse</h2>
+        <div className="zeile ">
+          <div className="flex sprache">
+            <label htmlFor="ausbildung">Sprache</label>
+
+            <select
+              id="sprache"
+              value={user.sprache}
+              onChange={(e) => setUser({ ...user, sprache: e.target.value })}
+            >
+              <option value={"Albanisch"}> Albanisch</option>
+              <option value={"Arabisch"}> Arabisch</option>
+              <option value={"Dänisch"}> Dänisch</option>
+              <option value={"Deutsch"}> Deutsch</option>
+              <option value={"Englisch"}> Englisch</option>
+              <option value={"Französisch"}> Französisch</option>
+              <option value={"Griechisch"}> Griechisch</option>
+              <option value={"Italienisch"}> Italienisch</option>
+              <option value={"Japanisch"}> Japanisch</option>
+              <option value={"Niederländisch"}> Niederländisch</option>
+              <option value={"Portugiesisch"}> Portugiesisch</option>
+              <option value={"Russisch"}> Russisch</option>
+              <option value={"Spanisch"}> Spanisch</option>
+              <option value={"Türkisch"}> Türkisch</option>
+            </select>
+          </div>
+
+          <div className="flex">
+            <label htmlFor="ausbildung">Niveau</label>
+
+            <select
+              id="niveau"
+              value={user.niveau}
+              onChange={(e) => setUser({ ...user, niveau: e.target.value })}
+            >
+              <option value={"Muttersprache"}>Muttersprache</option>
+              <option value={"Grundkenntnisse"}>Grundkenntnisse</option>
+              <option value={"Gut"}>Gut</option>
+              <option value={"Sehr gut"}> Sehr gut </option>
+              <option value={"Fließend"}>Fließend</option>
+            </select>
+          </div>
+        </div>
+        <div className="zeile margin">
+          <label htmlFor="languages">Add other languages</label>
+          <input
+            type="checkbox"
+            id="languages"
+            value={user.addLanguage}
+            onChange={(e) =>
+              setUser({ ...user, addLanguage: e.target.checked })
+            }
+          />
+        </div>
+        {user.addLanguage && (
+          <>
+            <div className="zeile">
+              <div className="flex sprache">
+                <label htmlFor="ausbildung">Sprache</label>
+
+                <select
+                  id="sprache"
+                  value={user.spracheEins}
+                  onChange={(e) =>
+                    setUser({ ...user, spracheEins: e.target.value })
+                  }
+                >
+                  <option value={"Albanisch"}> Albanisch</option>
+                  <option value={"Arabisch"}> Arabisch</option>
+                  <option value={"Dänisch"}> Dänisch</option>
+                  <option value={"Deutsch"}> Deutsch</option>
+                  <option value={"Englisch"}> Englisch</option>
+                  <option value={"Französisch"}> Französisch</option>
+                  <option value={"Griechisch"}> Griechisch</option>
+                  <option value={"Italienisch"}> Italienisch</option>
+                  <option value={"Japanisch"}> Japanisch</option>
+                  <option value={"Niederländisch"}> Niederländisch</option>
+                  <option value={"Portugiesisch"}> Portugiesisch</option>
+                  <option value={"Russisch"}> Russisch</option>
+                  <option value={"Spanisch"}> Spanisch</option>
+                  <option value={"Türkisch"}> Türkisch</option>
+                </select>
+              </div>
+
+              <div className="flex">
+                <label htmlFor="ausbildung">Niveau</label>
+
+                <select
+                  id="niveau"
+                  value={user.niveauEins}
+                  onChange={(e) =>
+                    setUser({ ...user, niveauEins: e.target.value })
+                  }
+                >
+                  <option value={"Muttersprache"}>Muttersprache</option>
+                  <option value={"Grundkenntnisse"}>Grundkenntnisse</option>
+                  <option value={"Gut"}>Gut</option>
+                  <option value={"Sehr gut"}> Sehr gut </option>
+                  <option value={"Fließend"}>Fließend</option>
+                </select>
+              </div>
+            </div>
+            <div className="zeile">
+              <div className="flex sprache">
+                <label htmlFor="ausbildung">Sprache</label>
+
+                <select
+                  id="sprache"
+                  value={user.spracheZwei}
+                  onChange={(e) =>
+                    setUser({ ...user, spracheZwei: e.target.value })
+                  }
+                >
+                  <option value={"Albanisch"}> Albanisch</option>
+                  <option value={"Arabisch"}> Arabisch</option>
+                  <option value={"Dänisch"}> Dänisch</option>
+                  <option value={"Deutsch"}> Deutsch</option>
+                  <option value={"Englisch"}> Englisch</option>
+                  <option value={"Französisch"}> Französisch</option>
+                  <option value={"Griechisch"}> Griechisch</option>
+                  <option value={"Italienisch"}> Italienisch</option>
+                  <option value={"Japanisch"}> Japanisch</option>
+                  <option value={"Niederländisch"}> Niederländisch</option>
+                  <option value={"Portugiesisch"}> Portugiesisch</option>
+                  <option value={"Russisch"}> Russisch</option>
+                  <option value={"Spanisch"}> Spanisch</option>
+                  <option value={"Türkisch"}> Türkisch</option>
+                </select>
+              </div>
+
+              <div className="flex margin">
+                <label htmlFor="ausbildung">Niveau</label>
+
+                <select
+                  id="niveau"
+                  value={user.niveauZwei}
+                  onChange={(e) =>
+                    setUser({ ...user, niveauZwei: e.target.value })
+                  }
+                >
+                  <option value={"Muttersprache"}>Muttersprache</option>
+                  <option value={"Grundkenntnisse"}>Grundkenntnisse</option>
+                  <option value={"Gut"}>Gut</option>
+                  <option value={"Sehr gut"}> Sehr gut </option>
+                  <option value={"Fließend"}>Fließend</option>
+                </select>
+              </div>
+            </div>
+          </>
+        )}
+
+        <button className="buttonformular2 button" type="submit">
           <div className="svg-wrapper-1">
             <div className="svg-wrapper">
               <svg
@@ -257,7 +396,7 @@ const FormularZwei = () => {
               </svg>
             </div>
           </div>
-          <span>Send</span>
+          <span className="send">Send</span>
         </button>
       </form>
     </motion.div>
