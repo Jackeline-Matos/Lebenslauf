@@ -1,20 +1,73 @@
-body {
+*body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+
 }
-.boxZwei {
-  display: flex;
+
+h1{
+  font-size: 2rem;
+}
+
+.container{
+  display: grid;
   align-items: center;
   justify-content: center;
   align-self: center;
   height: 100vh;
   width: 100vw;
+  color:white;
 }
-
-.boxZwei div {
-  width: 35vw;
+.container .box2 {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  width: 40vw;
   height: 95vh;
-
+  margin: auto;
+  margin-top: 1rem;
   background-image: url("../images/Chef\ de\ Cozinha\ Currículo\ Simples\ com\ Foto\ \(5\).png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.boxName{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin-left: 1rem;
+}
+
+.boxCityTelEmailAlter{
+    grid-column: 2/3 ;
+    grid-row: 1/2 ;
+    margin-top: 3.5rem;
+    margin-right: .5rem;
+    line-height: 1rem;
+    font-size: 10px;
+    justify-self: end;
+
+  
+}
+
+.boxStartEndBeruf{
+  grid-column: 1/2;
+  grid-row: 2/3 ;
+  margin-top: 2.5rem;
+  margin-left: 1rem;
+  font-size: x-small;
+  width: 100%;
+}
+
+.boxStellenUnterBeruf{
+  grid-column: 2/4 ;
+  grid-row: 2/4 ;
+  margin-left: 1rem;
+}
+
+.boxStellenUnterBeruf h3{
+  margin: 0;
+  padding-bottom: 0.5rem;
 }
