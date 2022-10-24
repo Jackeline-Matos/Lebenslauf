@@ -55,7 +55,7 @@ const TemplateZwei = () => {
 
         <div class="boxStartEndBeruf">
           {beruf.map((item) => (
-            <ul className="ulStartEnd">
+            <ul className="ulStartEndBeruf">
               <li>
                 {item.start} {item.end}
               </li>

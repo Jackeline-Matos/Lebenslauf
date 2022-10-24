@@ -4,13 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family:'Space Mono', monospace;
 
-}
-
-h1{
-  font-size: 2rem;
-  font-family:'Space Mono', monospace;
 }
 
 .container{
@@ -21,6 +15,7 @@ h1{
   height: 100vh;
   width: 100vw;
   color:white;
+  
 }
 .container .box2 {
   display: grid;
@@ -29,7 +24,6 @@ h1{
   width: 40vw;
   height: 95vh;
   margin: auto;
-  margin-top: 1rem;
   background-image: url("../images/Chef\ de\ Cozinha\ Currículo\ Simples\ com\ Foto\ \(5\).png");
   background-position: center;
   background-repeat: no-repeat;
@@ -41,20 +35,27 @@ h1{
     flex-direction: column;
     width: 40%;
     margin-left: 1rem;
+    padding-top: 0;
 }
 .boxName h1{
   margin: 0;
+  padding-top: 1rem;
+
+}
+
+h1{
+  font-size: 2rem;
 }
 .boxCityTelEmailAlter{
     grid-column: 2/3 ;
     grid-row: 1/2 ;
-    margin-top: 3.5rem;
+    margin-top: 1.5rem;
     margin-right: .5rem;
     line-height: 1rem;
     font-size: 10px;
     justify-self: end;
+    
 
-  
 }
 
 .boxStartEndBeruf{
@@ -70,6 +71,7 @@ h1{
   grid-column: 2/4 ;
   grid-row: 2/4 ;
   margin-left: 1rem;
+
 }
 
 .boxStellenUnterBeruf h3{
@@ -77,13 +79,17 @@ h1{
   padding-bottom: 0.5rem;
 }
 
-.ulStartEnd{
-    padding-bottom:1.8rem ;
+.ulStartEndBeruf{
+    padding-bottom:2.3rem ;
     list-style-type: none;
 }
 
 ul{
   list-style-type: none;
+}
+
+.ulStellen{
+  padding-bottom: .5rem;
 }
 
 .boxShulbildung{
