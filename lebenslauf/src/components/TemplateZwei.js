@@ -41,23 +41,32 @@ const TemplateZwei = () => {
           </h1>
         </div>
         <div className="boxCityTelEmailAlter">
-          <p>{user.stadt}</p>
+          <p>
+            {`${user.strasse[0].toUpperCase()}${user.strasse.slice(1)} 
+            ${user.hausnummer} 
+            ${user.plz}`}{" "}
+            <p>{user.stadt}</p>
+          </p>
+
           <p>{user.tel}</p>
           <p>{user.mail}</p>
           <p>{user.alter} Jahre</p>
         </div>
 
         <div class="boxStartEndBeruf">
-          <p>
-            {" "}
-            {user.start} / {user.end}
-          </p>
+          {beruf.map((item) => (
+            <ul className="ulStartEnd">
+              <li>
+                {item.start} {item.end}
+              </li>
+            </ul>
+          ))}
         </div>
 
         <div class="boxStellenUnterBeruf">
           <h3>Arbeit</h3>
           {beruf.map((item) => (
-            <ul className="ul">
+            <ul className="ulStellen">
               <li>{item.stellen}</li>
               <li>{item.unternehmen}</li>
             </ul>
