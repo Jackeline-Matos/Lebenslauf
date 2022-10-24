@@ -50,8 +50,9 @@ const TemplateZwei = () => {
     <div className="container">
       <div className="box2">
         <div className="boxName">
-          <h1 className="h1Name">{user.name.toUpperCase()}</h1>
-          <h1 className="h1Vorname">{user.vorname.toUpperCase()}</h1>
+          <h1 className="h1Name">
+            {user.name.toUpperCase()} {user.vorname.toUpperCase()}
+          </h1>
         </div>
         <div className="boxCityTelEmailAlter">
           <p>
@@ -65,7 +66,7 @@ const TemplateZwei = () => {
           <p>{user.mail}</p>
           <p>{user.alter} Jahre</p>
         </div>
-
+        <h3 className="h3Beruf">Arbeit</h3>
         <div class="boxStartEndBeruf">
           {beruf.map((item) => (
             <ul className="ulStartEndBeruf">
@@ -75,9 +76,7 @@ const TemplateZwei = () => {
             </ul>
           ))}
         </div>
-
         <div class="boxStellenUnterBeruf">
-          <h3>Arbeit</h3>
           {beruf.map((item) => (
             <ul className="ulStellen">
               <li>{item.stellen}</li>
@@ -85,16 +84,14 @@ const TemplateZwei = () => {
             </ul>
           ))}
         </div>
-
         <div class="boxStartEndSchule">
           <p>
             {" "}
             {user.startSchule} {user.endSchule}
           </p>
         </div>
-
+        <h3 className="h3Schulbildung">Schulbildung</h3>
         <div class="boxShulbildung">
-          <h3>Schulbildung</h3>
           <p>{user.schulForm}</p>
           <p>{user.schule}</p>
         </div>
@@ -125,7 +122,6 @@ const TemplateZwei = () => {
             </ul>
           ))}
         </div>
-
         <div className="boxHobbies">
           <h3>Hobbies</h3>
           {user.item.map((hobbies) => (
@@ -133,7 +129,7 @@ const TemplateZwei = () => {
               <li>{hobbies}</li>
             </ul>
           ))}
-        </div>
+        </div>{" "}
       </div>
     </div>
   );
