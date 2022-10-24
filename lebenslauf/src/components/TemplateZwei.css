@@ -19,15 +19,21 @@
 }
 .container .box2 {
   display: grid;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 35% 35% 30%;
   grid-template-rows: 1fr 1fr 1fr 1fr;
-  width: 40vw;
-  height: 95vh;
+  width: 100vw;
+  height: 100vh;
   margin: auto;
   background-image: url("../images/Chef\ de\ Cozinha\ Currículo\ Simples\ com\ Foto\ \(5\).png");
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat:repeat;
   background-size: cover;
+
+}
+
+.box2, .boxStellenUnterBeruf, .boxStudium{
+  border-right: 1px  white solid;
+
 }
 
 .boxName{
@@ -37,25 +43,37 @@
     margin-left: 1rem;
     padding-top: 0;
 }
-.boxName h1{
-  margin: 0;
-  padding-top: 1rem;
+.boxName{
+  margin-top:1rem;
+  margin-left: 3rem;
+  padding:0;
 
 }
 
-h1{
+.h1Name, .h1Vorname{
   font-size: 2rem;
+  font-family: 'Space Mono', monospace;
+  padding:0;
 }
+
+
+
 .boxCityTelEmailAlter{
-    grid-column: 2/3 ;
+    grid-column: 3/4 ;
     grid-row: 1/2 ;
     margin-top: 1.5rem;
-    margin-right: .5rem;
+    margin-right: 3rem;
     line-height: 1rem;
     font-size: 10px;
     justify-self: end;
     
 
+}
+
+.ulStartEndBeruf{
+    padding-bottom:2.3rem ;
+    list-style-type: none;
+    justify-self: end;
 }
 
 .boxStartEndBeruf{
@@ -64,25 +82,23 @@ h1{
   margin-top: 2.5rem;
   margin-left: 1rem;
   font-size: x-small;
-  width: 100%;
+  justify-self: end;
+
 }
 
 .boxStellenUnterBeruf{
   grid-column: 2/4 ;
   grid-row: 2/4 ;
   margin-left: 1rem;
-
+  width: 35%;
 }
 
 .boxStellenUnterBeruf h3{
   margin: 0;
   padding-bottom: 0.5rem;
+  font-family: 'Space Mono', monospace;
 }
 
-.ulStartEndBeruf{
-    padding-bottom:2.3rem ;
-    list-style-type: none;
-}
 
 ul{
   list-style-type: none;
@@ -96,28 +112,57 @@ ul{
   grid-column: 2/3;
   grid-row: 3/4 ;
   margin-top: 2.5rem;
-  width: 100%;
+  margin-left: 1rem;
   font-size: 15px;
 }
 
 .boxShulbildung h3{
   margin: 0;
-  font-size: medium;
+  font-family: 'Space Mono', monospace;
 }
-.boxStartEndSchule, .boxStartEndUni{
+.boxStartEndSchule{
   grid-column: 1/2;
   grid-row: 3/4;
   margin-left: 3rem;
   margin-top: 4.5rem;
   font-size: x-small;
-  width: 100%;
+  justify-self: end;
 }
 
 .boxStartEndUni{
-  margin-top: 7.56rem;
+  grid-column: 1/2;
+  grid-row: 4/5;
+  margin-left: 3rem;
+  margin-top: .1rem;
+  font-size: x-small;
+  justify-self: end;
 }
 
-.uni{
-  margin-top: .5rem;
+.boxStudium{
+  margin-top: 0;
   font-size: 15px;
+  grid-column: 2/3;
+  grid-row: 4/5;
+  margin-left: 1rem;
+  width: 65%;
+}
+
+.boxBorder{
+  border-left: 1cm white ;
+}
+
+.boxSprache{
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+
+.boxSprache h3{
+  margin: 0;
+  font-family: 'Space Mono', monospace;
+}
+
+.boxSpracheNiveau{
+  grid-column: 3/4;
+  grid-row: 2/3;
+  margin-left: 10rem;
 }

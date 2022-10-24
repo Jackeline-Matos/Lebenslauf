@@ -32,13 +32,26 @@ const TemplateZwei = () => {
     },
   ];
 
+  const sprache = [
+    {
+      sprache: user.sprache,
+      niveau: user.niveau,
+    },
+    {
+      sprache: user.spracheEins,
+      niveau: user.niveauEins,
+    },
+    {
+      sprache: user.spracheZwei,
+      niveau: user.niveauZwei,
+    },
+  ];
   return (
     <div className="container">
       <div className="box2">
         <div className="boxName">
-          <h1>
-            {user.name.toUpperCase()} {user.vorname.toUpperCase()}
-          </h1>
+          <h1 className="h1Name">{user.name.toUpperCase()}</h1>
+          <h1 className="h1Vorname">{user.vorname.toUpperCase()}</h1>
         </div>
         <div className="boxCityTelEmailAlter">
           <p>
@@ -76,7 +89,7 @@ const TemplateZwei = () => {
         <div class="boxStartEndSchule">
           <p>
             {" "}
-            {user.startSchule} / {user.endSchule}
+            {user.startSchule} {user.endSchule}
           </p>
         </div>
 
@@ -84,17 +97,33 @@ const TemplateZwei = () => {
           <h3>Schulbildung</h3>
           <p>{user.schulForm}</p>
           <p>{user.schule}</p>
-
-          <div className="uni">
-            <p>{user.bildungsNiveau}</p>
-            <p>{user.studiengang}</p>
-          </div>
         </div>
         <div class="boxStartEndUni">
           <p>
             {" "}
-            {user.startStudiengang} / {user.endStudiengang}
+            {user.startStudiengang} {user.endStudiengang}
           </p>
+        </div>
+        <div className="boxStudium">
+          <p>{user.bildungsNiveau}</p>
+          <p>{user.uniAbschluss}</p>
+          <p>{user.universitaet}</p>
+          <p>{user.studiengang}</p>
+        </div>
+        <div className="boxSprache">
+          <h3>Sprache</h3>
+          {sprache.map((item) => (
+            <ul className="ulSprache">
+              <li>{item.sprache}</li>
+            </ul>
+          ))}
+        </div>
+        <div className="boxSpracheNiveau">
+          {sprache.map((item) => (
+            <ul className="ulSpracheNiveau">
+              <li>{item.niveau}</li>
+            </ul>
+          ))}
         </div>
       </div>
     </div>
