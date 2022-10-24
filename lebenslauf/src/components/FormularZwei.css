@@ -77,6 +77,22 @@ form {
 .margin {
   margin-bottom: 1rem;
 }
+.hinzuMargin {
+  margin-top: 1rem;
+}
+.hinzu {
+  border: 0.5px solid black;
+  padding: 0.5rem;
+}
+.ulList {
+  list-style-type: none;
+  margin-top: 2rem;
+}
+.liList {
+  border: 2px solid black;
+  margin-right: 0.5rem;
+  padding: 0.2rem;
+}
 @keyframes fly-1 {
   from {
     transform: translateY(0.1em);
