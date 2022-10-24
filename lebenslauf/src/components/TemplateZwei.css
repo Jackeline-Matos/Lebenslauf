@@ -1,13 +1,16 @@
+@import "../fonts/spaceMono.css";
+
 *body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
+  font-family:'Space Mono', monospace;
 
 }
 
 h1{
   font-size: 2rem;
+  font-family:'Space Mono', monospace;
 }
 
 .container{
@@ -72,6 +75,15 @@ h1{
 .boxStellenUnterBeruf h3{
   margin: 0;
   padding-bottom: 0.5rem;
+}
+
+.ulStartEnd{
+    padding-bottom:1.8rem ;
+    list-style-type: none;
+}
+
+ul{
+  list-style-type: none;
 }
 
 .boxShulbildung{
