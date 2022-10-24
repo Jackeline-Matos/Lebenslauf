@@ -3,6 +3,7 @@ import UserContext from "../context/UserContext";
 import { useContext } from "react";
 import { useEffect, useRef } from "react";
 import { useReactToPrint } from "react-to-print";
+import { motion } from "framer-motion";
 const TemplateEins = () => {
   const componentRef = useRef();
   const handlePrint = useReactToPrint({
@@ -88,20 +89,29 @@ const TemplateEins = () => {
         <div className="containerTemplateEins">
           <div className="header">{user.vorname.toUpperCase()}</div>
           <div className="untertitel">{user.stellen}</div>
-          <div className="contentLinksTemplateEins">
+          <motion.div className="contentLinksTemplateEins">
             <div>
-              <strong>Persönliches Profil</strong>{" "}
+              <strong
+                style={{
+                  fontFamily: "Mulish, sans-serif",
+                  fontSize: "16.6px",
+                }}
+              >
+                Persönliches Profil
+              </strong>{" "}
             </div>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. A
-              doloremque mollitia veritatis dolore, culpa ut, nihil ipsam
-              expedita, impedit distinctio ea accusantium velit maxime? Optio
-              neque corrupti eaque omnis odio!
-            </p>
-          </div>
+            <p>{user.text}</p>
+          </motion.div>
           <div className="contentRechtsTemplateEins">
             <div>
-              <strong>Beruflicher Werdegang</strong>
+              <strong
+                style={{
+                  fontFamily: "Mulish, sans-serif",
+                  fontSize: "16.6px",
+                }}
+              >
+                Beruflicher Werdegang
+              </strong>
             </div>
             <ul>
               {beruf.map((item) => (
@@ -120,7 +130,14 @@ const TemplateEins = () => {
           </div>
           <div className="faehigkeiten">
             <div>
-              <strong>Fähigkeiten & Talente</strong>
+              <strong
+                style={{
+                  fontFamily: "Mulish, sans-serif",
+                  fontSize: "16.6px",
+                }}
+              >
+                Fähigkeiten & Talente
+              </strong>
             </div>
             <ul>
               {user.faehigkeiten.map((item) => (
@@ -133,7 +150,15 @@ const TemplateEins = () => {
           </div>{" "}
           <div className="kontaktinformationen">
             <div>
-              <strong> Kontaktinformationen</strong>
+              <strong
+                style={{
+                  fontFamily: "Mulish, sans-serif",
+                  fontSize: "16.6px",
+                }}
+              >
+                {" "}
+                Kontaktinformationen
+              </strong>
             </div>
             {user.strasse.length > 1 ? (
               <li>
@@ -149,7 +174,14 @@ const TemplateEins = () => {
           </div>
           <div className="schulbildung">
             <div>
-              <strong>Schulbildung</strong>
+              <strong
+                style={{
+                  fontFamily: "Mulish, sans-serif",
+                  fontSize: "16.6px",
+                }}
+              >
+                Schulbildung
+              </strong>
             </div>
             {studium[0].abschluss.length > 1 ? (
               <>
@@ -191,15 +223,27 @@ const TemplateEins = () => {
           </div>
           <div className="hobbiesTemplateEins">
             <div>
-              <strong>Interessen und Hobbys</strong>
+              <strong
+                style={{
+                  fontFamily: "Mulish, sans-serif",
+                  fontSize: "16.6px",
+                }}
+              >
+                Interessen und Hobbys
+              </strong>
             </div>
             {user.item.map((item) => (
               <li>{item}</li>
             ))}
           </div>
-          <div className="footerTemplateEins">{user.name.toUpperCase()}</div>
+          <div className="footerTemplateEins">
+            {user.name.toUpperCase()}{" "}
+            <div className="printFooter">
+              {" "}
+              <button onClick={handlePrint}>Print</button>
+            </div>
+          </div>
         </div>
-        {/* <button onClick={handlePrint}>Print</button> */}
       </div>
     </>
   );

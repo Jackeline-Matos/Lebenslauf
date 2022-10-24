@@ -21,11 +21,12 @@
 }
 .containerTemplateEins div {
   padding: 10px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 .containerTemplateEins div div {
   font-family: "Mulish", sans-serif;
   font-size: 16.6px;
+  font-weight: bold;
 }
 .containerTemplateEins div div li {
   font-family: "Mulish", sans-serif;
@@ -61,11 +62,19 @@
   font-family: "Mulish", sans-serif;
   font-weight: 400;
 }
+.contentLinksTemplateEins > p {
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+}
 .contentRechtsTemplateEins {
   grid-column-start: 3;
   grid-column-end: 5;
   grid-row-start: 3;
   grid-row-end: span 2;
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+}
+.contentRechtsTemplateEins ul > li {
   font-family: "Mulish", sans-serif;
   font-weight: 400;
 }
@@ -77,11 +86,20 @@
   font-family: "Mulish", sans-serif;
   font-weight: 400;
 }
+.faehigkeiten ul > li {
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+}
 .kontaktinformationen {
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 5;
   grid-row-end: span 1;
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+  list-style-type: none;
+}
+.kontaktinformationen > li {
   font-family: "Mulish", sans-serif;
   font-weight: 400;
   list-style-type: none;
@@ -95,11 +113,20 @@
   font-weight: 400;
   list-style-type: none;
 }
+.schulbildung > li {
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+  list-style-type: none;
+}
 .hobbiesTemplateEins {
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 6;
   grid-row-end: span 1;
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+}
+.hobbiesTemplateEins > li {
   font-family: "Mulish", sans-serif;
   font-weight: 400;
 }
@@ -115,4 +142,17 @@
 }
 .margin-bottom {
   margin-bottom: 0.5rem;
+  position: relative;
+}
+.printFooter {
+  position: absolute;
+  right: 25rem;
+  bottom: 50px;
+}
+.printFooter > button {
+  padding: 0.5rem;
+  width: 8rem;
+  font-family: "Mulish", sans-serif;
+  font-weight: 900;
+  background-color: #ffffff;
 }
