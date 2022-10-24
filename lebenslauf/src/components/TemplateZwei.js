@@ -125,6 +125,15 @@ const TemplateZwei = () => {
             </ul>
           ))}
         </div>
+
+        <div className="boxHobbies">
+          <h3>Hobbies</h3>
+          {user.item.map((hobbies) => (
+            <ul className="ulHobbies">
+              <li>{hobbies}</li>
+            </ul>
+          ))}
+        </div>
       </div>
     </div>
   );
