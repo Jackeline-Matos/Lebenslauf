@@ -54,7 +54,7 @@ const TemplateEins = () => {
           <div className="faehigkeiten">faehigkeiten</div>{" "}
           <div className="kontaktinformationen">Kontaktinformationen</div>
           <div className="schulbildung">Schulbildung</div>
-          <div className="hobbies">Hobbys</div>
+          <div className="hobbiesTemplateEins">Hobbys</div>
           <div className="footerTemplateEins">Footer</div>
         </div>
         <button onClick={handlePrint}>Print</button>

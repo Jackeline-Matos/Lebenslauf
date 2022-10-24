@@ -58,11 +58,11 @@
   grid-row-start: 5;
   grid-row-end: span 2;
 }
-.hobbies {
+.hobbiesTemplateEins {
   grid-column-start: 1;
-  grid-column-end: 4;
+  grid-column-end: 3;
   grid-row-start: 6;
-  grid-row-end: span 2;
+  grid-row-end: span 1;
 }
 .footerTemplateEins {
   grid-column-start: 1;
