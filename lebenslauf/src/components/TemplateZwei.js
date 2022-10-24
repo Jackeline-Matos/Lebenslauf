@@ -110,16 +110,22 @@ const TemplateZwei = () => {
         <p>{user.born}</p>
       </div>
       <div class="uberMich">
-        <h3>Über Mich</h3>
-        <p>{user.text}</p>
+        <>
+          {user.text.length > 1 ? (
+            <>
+              <h3>Über Mich</h3>
+              <p>{user.text}</p>
+            </>
+          ) : null}
+        </>
       </div>
       <div class="boxBeruf">
-        <h3>Berufserfahrung</h3>
         <ul>
           {beruf.map((item) => (
             <>
               {item.stellen.length > 1 ? (
                 <>
+                  <h3>Berufserfahrung</h3>
                   <li>{item.stellen} </li>{" "}
                   <li className="margin-bottom">
                     {item.unternehmen}- {item.start}-{item.end}
@@ -195,6 +201,9 @@ const TemplateZwei = () => {
             <li>{hobby}</li>
           ))}
         </ul>
+      </div>
+      <div className="boxButton">
+        <button>Print</button>
       </div>
     </div>
   );
