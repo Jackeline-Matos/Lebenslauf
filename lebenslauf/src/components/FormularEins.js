@@ -179,9 +179,7 @@ const FormularEins = () => {
                   type="text"
                   id="mittlereSchulreife"
                   value={user.mittlereSchulreife}
-                  onChange={(e) =>
-                    setUser({ ...user, mittlereSchulreife: e.target.value })
-                  }
+                  onChange={(e) => setUser({ ...user })}
                 />
               </div>
               <div className="flex">
@@ -233,9 +231,7 @@ const FormularEins = () => {
                   type="text"
                   id="mittlereSchulreife"
                   value={user.mittlereSchulreife}
-                  onChange={(e) =>
-                    setUser({ ...user, mittlereSchulreife: e.target.value })
-                  }
+                  onChange={(e) => setUser({ ...user })}
                 />
               </div>
               <div className="flex">
@@ -432,7 +428,7 @@ const FormularEins = () => {
                 <input
                   type="text"
                   id="bachelor"
-                  value="Bachelor"
+                  value={user.bachelor}
                   onChange={(e) =>
                     setUser({ ...user, bachelor: e.target.value })
                   }

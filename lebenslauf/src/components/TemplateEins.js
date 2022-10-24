@@ -41,6 +41,7 @@ const TemplateEins = () => {
   ];
   const schule = [
     {
+      schulForm: user.schulForm,
       schule: user.schule,
       schulStart: user.startSchule,
       schulEnde: user.endSchule,
@@ -49,11 +50,6 @@ const TemplateEins = () => {
       schule: user.mittlereSchulreife,
       schulStart: user.start,
       schulEnde: user.end,
-    },
-    {
-      schule: user.mittlereSchule,
-      schulStart: user.startMittlereSchule,
-      schulEnde: user.endMittlereSchule,
     },
   ];
 
@@ -171,9 +167,9 @@ const TemplateEins = () => {
               <>
                 {ausbildung.map((item) => (
                   <>
-                    <li>{item.staette}</li>
+                    <li>{item.ausbildung}</li>
                     <li className="margin-bottom">
-                      Abschluss im Jahr {item.end},{item.ausbildung}
+                      Abschluss im Jahr {item.end}, {item.staette}
                     </li>
                   </>
                 ))}
@@ -183,6 +179,7 @@ const TemplateEins = () => {
               <>
                 {schule.map((item) => (
                   <>
+                    <li>{item.schulForm}</li>
                     <li>{item.schule}</li>
                     <li className="margin-bottom">
                       Abschluss im Jahr {item.schulEnde}

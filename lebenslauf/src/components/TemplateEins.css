@@ -24,10 +24,11 @@
   border: 1px solid black;
 }
 .containerTemplateEins div div {
-  font-family: bold;
+  font-family: "Mulish", sans-serif;
   font-size: 16.6px;
 }
 .containerTemplateEins div div li {
+  font-family: "Mulish", sans-serif;
   font-weight: 400;
   font-size: 9.3px;
 }

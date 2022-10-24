@@ -45,7 +45,7 @@ function App() {
     startSchule: "",
     endSchule: "",
 
-    mittlereSchulreife: "",
+    mittlereSchulreife: "Mittlere Schulreife",
     start: "",
     end: "",
 
@@ -68,12 +68,12 @@ function App() {
     startStudiengang: "",
     endStudiengang: "",
 
-    bachelor: "",
+    bachelor: "bachelor",
     universitaetBachelor: "",
     studiengangBachelor: "",
     startUniversitaetBachelor: "",
     endUniversitaetBachelor: "",
-
+    text: "",
     item: [],
     faehigkeiten: [],
     value: false,
