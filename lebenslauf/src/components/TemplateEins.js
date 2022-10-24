@@ -75,8 +75,20 @@ const TemplateEins = () => {
               ))}
             </ul>
           </div>
-          <div className="faehigkeiten">faehigkeiten</div>{" "}
-          <div className="kontaktinformationen">Kontaktinformationen</div>
+          <div className="faehigkeiten">
+            <div>Fähigkeiten & Talente</div>
+            <ul>
+              {user.faehigkeiten.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          </div>{" "}
+          <div className="kontaktinformationen">
+            <div> Kontaktinformationen</div>
+            {user.tel.length > 1 ? <li>{user.tel}</li> : null}
+            {user.mail.length > 1 ? <li>{user.mail}</li> : null}
+            {user.tel.length > 1 ? <li>{user.tel}</li> : null}
+          </div>
           <div className="schulbildung">Schulbildung</div>
           <div className="hobbiesTemplateEins">Hobbys</div>
           <div className="footerTemplateEins">{user.name}</div>
