@@ -2,6 +2,7 @@ import UserContext from "../context/UserContext";
 import { useContext } from "react";
 import { useEffect } from "react";
 import "./TemplateZwei.css";
+import Bild from "../images/templateZwei.png";
 const TemplateZwei = () => {
   const [user, setUser] = useContext(UserContext);
   useEffect(() => {
@@ -72,8 +73,22 @@ const TemplateZwei = () => {
     },
   ];
 
+  const sprache = [
+    { sprache: user.sprache },
+    { sprache: user.spracheEins },
+    { sprache: user.spracheZwei },
+  ];
+
   return (
-    <div className="container">
+    <div
+      className="container"
+      style={{
+        backgroundImage: `url(${Bild})`,
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+      }}
+    >
       <div className="boxHeader">
         <h1>
           {user.name.toUpperCase()} {user.vorname.toUpperCase()}
@@ -96,12 +111,7 @@ const TemplateZwei = () => {
       </div>
       <div class="uberMich">
         <h3>Über Mich</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit sit
-          eos illum praesentium esse saepe vero minima nam cumque reprehenderit,
-          beatae dolor perferendis quaerat ex voluptates expedita velit
-          molestias in?
-        </p>
+        <p>{user.text}</p>
       </div>
       <div class="boxBeruf">
         <h3>Berufserfahrung</h3>
@@ -171,6 +181,15 @@ const TemplateZwei = () => {
       </div>
       <div class="boxHobbies">
         <h3>Hobbies</h3>
+        <ul>
+          {user.item.map((hobby) => (
+            <li>{hobby}</li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="boxSprache">
+        <h3>Sprache</h3>
         <ul>
           {user.item.map((hobby) => (
             <li>{hobby}</li>
