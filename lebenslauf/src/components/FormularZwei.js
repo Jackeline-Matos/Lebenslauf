@@ -17,6 +17,9 @@ const FormularZwei = () => {
   const [faehigkeiten, setFaehigkeiten] = useState([]);
   const [upDate, setUpDate] = useState([]);
   const [input, setInput] = useState("");
+  const [hobbies, setHobbies] = useState([]);
+  const [inputHobbies, setInputHobbies] = useState("");
+  const [upDateHobbies, setUpDateHobbies] = useState([]);
   console.log(user);
 
   useEffect(() => {
@@ -31,11 +34,11 @@ const FormularZwei = () => {
     localStorage.setItem("data", JSON.stringify(user));
   }, [user]);
 
-  const [selectedOptions, setSelectedOptions] = useState([]);
+  // const [selectedOptions, setSelectedOptions] = useState([]);
 
   const haendleSubmit = (event) => {
     event.preventDefault();
-    setUser({ ...user, item: selectedOptions });
+    setUser({ ...user, item: hobbies, faehigkeiten: faehigkeiten });
     user.template === 1
       ? navigate("/templateeins")
       : user.template === 2
@@ -43,22 +46,25 @@ const FormularZwei = () => {
       : navigate("/templatedrei");
   };
 
-  const hobbiesOptions = [
-    { value: "lesen", label: "Lesen" },
-    { value: "reisen", label: "Reisen" },
-    { value: "musik", label: "Musik" },
-    { value: "schwimmen", label: "Schwimmen" },
-    { value: "wandern", label: "Wandern" },
-    { value: "joggen", label: "Joggen" },
-    { value: "sport", label: "Sport" },
-    { value: "kochen", label: "Kochen" },
-  ];
+  // const hobbiesOptions = [
+  //   { value: "lesen", label: "Lesen" },
+  //   { value: "reisen", label: "Reisen" },
+  //   { value: "musik", label: "Musik" },
+  //   { value: "schwimmen", label: "Schwimmen" },
+  //   { value: "wandern", label: "Wandern" },
+  //   { value: "joggen", label: "Joggen" },
+  //   { value: "sport", label: "Sport" },
+  //   { value: "kochen", label: "Kochen" },
+  // ];
 
   const removeList = (item) => {
     const newList = faehigkeiten.filter((l) => l !== item);
     setFaehigkeiten(newList);
   };
-
+  const removeHobbies = (item) => {
+    const newListHobbies = hobbies.filter((l) => l !== item);
+    setHobbies(newListHobbies);
+  };
   return (
     <motion.div
       initial={{ width: 0 }}
@@ -84,8 +90,6 @@ const FormularZwei = () => {
         </div>
         <div className="zeile ">
           <div className="flex sprache">
-            <label htmlFor="ausbildung">Kenntnisse</label>
-
             <input
               type="text"
               id="Kenntnisse"
@@ -127,45 +131,23 @@ const FormularZwei = () => {
           </div>
 
           <div className="flex">
-            <label htmlFor="ausbildung">Niveau</label>
-
             <select
               id="niveau"
               value={user.niveau}
               onChange={(e) => setUser({ ...user, niveau: e.target.value })}
             >
-              <option value={"Muttersprache"}>Muttersprache</option>
-              <option value={"Grundkenntnisse"}>Grundkenntnisse</option>
-              <option value={"Gut"}>Gut</option>
-              <option value={"Sehr gut"}> Sehr gut </option>
-              <option value={"Fließend"}>Fließend</option>
+              <option value={"Muttersprache"}>Profi</option>
+              <option value={"Grundkenntnisse"}>Fortgeschritten</option>
+              <option value={"Gut"}>Anfänger</option>
             </select>
           </div>
         </div>
 
         <div className="zeile underline">
-          <h2>Hobbies </h2>
+          <h2>Sprachkenntnisse</h2>
         </div>
-        <div>
-          <Select
-            className="hobbies"
-            isMulti
-            id="hobbies"
-            options={hobbiesOptions}
-            isSearchable={true}
-            isDisabled={false}
-            isLoading={false}
-            isRtl={false}
-            closeMenuOnSelect={false}
-            onChange={(item) => setSelectedOptions(item)}
-          />
-        </div>
-
-        <h2>Sprachkenntnisse</h2>
         <div className="zeile ">
           <div className="flex sprache">
-            <label htmlFor="ausbildung">Sprache</label>
-
             <select
               id="sprache"
               value={user.sprache}
@@ -189,8 +171,6 @@ const FormularZwei = () => {
           </div>
 
           <div className="flex">
-            <label htmlFor="ausbildung">Niveau</label>
-
             <select
               id="niveau"
               value={user.niveau}
@@ -311,6 +291,52 @@ const FormularZwei = () => {
             </div>
           </>
         )}
+
+        <div className="zeile underline">
+          <h2>Hobbies</h2>
+        </div>
+        <div className="zeile ">
+          <div className="flex sprache">
+            <input
+              type="text"
+              id="Kenntnisse"
+              value={inputHobbies}
+              onChange={(e) => setInputHobbies(e.target.value)}
+            />
+
+            <div className="hinzuMargin">
+              <span
+                className="hinzu"
+                onClick={() => {
+                  setHobbies([...hobbies, inputHobbies]);
+                  setInputHobbies("");
+                }}
+              >
+                Hinzufügen
+              </span>
+            </div>
+
+            <ul className="ulList">
+              {hobbies.map((item) => {
+                return (
+                  <span className="liList" key={item}>
+                    {item}{" "}
+                    <span
+                      onClick={() => removeHobbies(item)}
+                      style={{
+                        marginLeft: "10px",
+                        color: "red",
+                        cursor: "pointer",
+                      }}
+                    >
+                      x
+                    </span>
+                  </span>
+                );
+              })}
+            </ul>
+          </div>
+        </div>
 
         <button className="buttonformular2 button" type="submit">
           <div className="svg-wrapper-1">

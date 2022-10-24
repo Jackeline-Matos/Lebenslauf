@@ -5,7 +5,7 @@
 }
 
 h2 {
-  margin-top: 3rem;
+  margin-top: 2.5rem;
 }
 .cta.zu.sch {
   position: absolute;
@@ -26,6 +26,7 @@ select {
 .zeile.underline {
   border-bottom: 2px solid black;
   width: 60vw;
+  margin-bottom: 1rem;
 }
 /* From uiverse.io by @adamgiebl */
 .buttonformular2 {

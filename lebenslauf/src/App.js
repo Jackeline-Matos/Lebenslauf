@@ -76,6 +76,7 @@ function App() {
 
     hobbies: "",
     item: "",
+    faehigkeiten: "",
     value: false,
     valueEins: false,
     addLanguage: false,
