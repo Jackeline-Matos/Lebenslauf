@@ -76,8 +76,8 @@ const TemplateEins = () => {
     },
     {
       abschluss: user.bachelor,
-      studiengang: user.universitaetBachelor,
-      universitaet: user.studiengangBachelor,
+      studiengang: user.studiengangBachelor,
+      universitaet: user.universitaetBachelor,
       start: user.startUniversitaetBachelor,
       end: user.endUniversitaetBachelor,
     },
@@ -90,10 +90,12 @@ const TemplateEins = () => {
         style={{ width: "100%", height: window.innerHeight }}
       >
         <div className="containerTemplateEins">
-          <div className="header">{user.vorname}</div>
+          <div className="header">{user.vorname.toUpperCase()}</div>
           <div className="untertitel">{user.stellen}</div>
           <div className="contentLinksTemplateEins">
-            <div> Persönliches Profil</div>
+            <div>
+              <strong>Persönliches Profil</strong>{" "}
+            </div>
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. A
               doloremque mollitia veritatis dolore, culpa ut, nihil ipsam
@@ -102,14 +104,16 @@ const TemplateEins = () => {
             </p>
           </div>
           <div className="contentRechtsTemplateEins">
-            <div>Beruflicher Werdegang</div>
+            <div>
+              <strong>Beruflicher Werdegang</strong>
+            </div>
             <ul>
               {beruf.map((item) => (
                 <>
                   {item.stellen.length > 1 ? (
                     <>
                       <li>{item.stellen} </li>{" "}
-                      <li>
+                      <li className="margin-bottom">
                         {item.unternehmen}- {item.start}-{item.end}
                       </li>
                     </>
@@ -119,46 +123,69 @@ const TemplateEins = () => {
             </ul>
           </div>
           <div className="faehigkeiten">
-            <div>Fähigkeiten & Talente</div>
+            <div>
+              <strong>Fähigkeiten & Talente</strong>
+            </div>
             <ul>
               {user.faehigkeiten.map((item) => (
                 <li>{item}</li>
               ))}
+              {user.item.map((hobby) => (
+                <li>{hobby}</li>
+              ))}
             </ul>
           </div>{" "}
           <div className="kontaktinformationen">
-            <div> Kontaktinformationen</div>
-            {user.str.length > 1 ? (
+            <div>
+              <strong> Kontaktinformationen</strong>
+            </div>
+            {user.strasse.length > 1 ? (
               <li>
-                Adresse: {user.str} {user.hausnummer} <br /> {user.plz}{" "}
+                Adresse: {user.strasse} {user.hausnummer} <br /> {user.plz}{" "}
                 {user.stadt}
               </li>
             ) : null}
 
             {user.tel.length > 1 ? <li>Mobil: {user.tel}</li> : null}
-            {user.mail.length > 1 ? <li>Mail: {user.mail}</li> : null}
+            {user.mail.length > 1 ? (
+              <li className="margin-bottom">Mail: {user.mail}</li>
+            ) : null}
           </div>
           <div className="schulbildung">
-            <div>Schulbildung</div>
-            {studium.abschluss.length > 1 ? (
+            <div>
+              <strong>Schulbildung</strong>
+            </div>
+            {studium[0].abschluss.length > 1 ? (
               <>
                 {studium.map((item) => (
                   <>
                     <li>{item.universitaet}</li>
-                    <li>
+                    <li className="margin-bottom">
                       {item.abschluss} in {item.studiengang}, {item.end}
                     </li>
                   </>
                 ))}
               </>
             ) : null}
-            {ausbildung.abschluss.length > 1 ? (
+            {ausbildung[0].ausbildung.length > 1 ? (
               <>
                 {ausbildung.map((item) => (
                   <>
                     <li>{item.staette}</li>
-                    <li>
-                      Abschluss im Jahr {item.end},{item.ausbildung},
+                    <li className="margin-bottom">
+                      Abschluss im Jahr {item.end},{item.ausbildung}
+                    </li>
+                  </>
+                ))}
+              </>
+            ) : null}
+            {schule[0].schule.length > 1 ? (
+              <>
+                {schule.map((item) => (
+                  <>
+                    <li>{item.schule}</li>
+                    <li className="margin-bottom">
+                      Abschluss im Jahr {item.schulEnde}
                     </li>
                   </>
                 ))}
@@ -166,14 +193,16 @@ const TemplateEins = () => {
             ) : null}
           </div>
           <div className="hobbiesTemplateEins">
-            <div>Interessen und Hobbys</div>
-            {user.hobbies.map((item) => (
+            <div>
+              <strong>Interessen und Hobbys</strong>
+            </div>
+            {user.item.map((item) => (
               <li>{item}</li>
             ))}
           </div>
-          <div className="footerTemplateEins">{user.name}</div>
+          <div className="footerTemplateEins">{user.name.toUpperCase()}</div>
         </div>
-        <button onClick={handlePrint}>Print</button>
+        {/* <button onClick={handlePrint}>Print</button> */}
       </div>
     </>
   );

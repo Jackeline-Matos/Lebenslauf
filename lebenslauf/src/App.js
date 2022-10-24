@@ -74,9 +74,8 @@ function App() {
     startUniversitaetBachelor: "",
     endUniversitaetBachelor: "",
 
-    hobbies: "",
-    item: "",
-    faehigkeiten: "",
+    item: [],
+    faehigkeiten: [],
     value: false,
     valueEins: false,
     addLanguage: false,
