@@ -86,6 +86,21 @@ const FormularZwei = () => {
       </button>
       <form onSubmit={haendleSubmit}>
         <div className="zeile underline">
+          <h2>Beschreibe dich selbst in 3 Sätzen!</h2>
+        </div>
+        <div className="zeile ">
+          <div className="flex sprache">
+            <textarea
+              name="überDich"
+              id=""
+              cols="30"
+              rows="10"
+              value={user.text}
+              onChange={(e) => setUser({ ...user, text: e.target.value })}
+            ></textarea>
+          </div>
+        </div>
+        <div className="zeile underline">
           <h2>Kenntnisse</h2>
         </div>
         <div className="zeile ">
