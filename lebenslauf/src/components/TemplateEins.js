@@ -1,9 +1,17 @@
 import "./TemplateEins.css";
 import UserContext from "../context/UserContext";
 import { useContext } from "react";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+import { useReactToPrint } from "react-to-print";
 const TemplateEins = () => {
+  const componentRef = useRef();
+  const handlePrint = useReactToPrint({
+    content: () => componentRef.current,
+    documentTitle: "lebenslauf",
+    onAfterPrint: () => alert("Print success"),
+  });
   const [user, setUser] = useContext(UserContext);
+
   useEffect(() => {
     const userData = JSON.parse(localStorage.getItem("data"));
 
@@ -34,77 +42,22 @@ const TemplateEins = () => {
   console.log(beruf);
   return (
     <>
-      {" "}
-      <div class="boxEins">
-        <div className="innerBoxEins">
-          <div className="hauptBox">
-            <h1 className="hTemplateEins">
-              {user.name.toUpperCase()} {user.vorname.toUpperCase()}
-            </h1>
-            <div className="rechteUndLinke">
-              <div className="linkeBox">
-                <ul className="ul">
-                  <li className="strong">
-                    {" "}
-                    <strong>Anschrift</strong>{" "}
-                  </li>
-                  <li>
-                    {user.strasse}
-                    {user.hausnummer}
-                  </li>
-                  <li>
-                    {user.plz}
-                    {user.stadt}
-                  </li>
-                </ul>
-                <ul className="ul">
-                  <li className="strong">
-                    <strong>Geburtsdatum</strong>{" "}
-                  </li>
-                  <li>{user.born}</li>
-                </ul>
-                <div className="mitKringel">
-                  {" "}
-                  <ul className="ul">
-                    <li className="strong">{user.mail}</li>
-                    <li>{user.tel}</li>
-                  </ul>
-                </div>
-                {/* <img
-                  className="kringel"
-                  src={require("../images/KringelTemplateEins.png")}
-                  alt="Kringel"
-                 
-                /> */}
-                <div class="block_1 templateEins">
-                  {" "}
-                  <h4 className="block">Ausbildung</h4>
-                </div>
-                <ul className="ul">
-                  <li className="strong">
-                    <strong>{user.schulForm}</strong>{" "}
-                  </li>
-                  <li>{user.ausbildung}</li>
-                </ul>
-                {beruf.map((item) => (
-                  <ul className="ul">
-                    <li>{item.stellen}</li>
-                    <li>
-                      {item.start}-{item.end}
-                    </li>
-                    <li>{item.unternehmen}</li>
-                  </ul>
-                ))}
-              </div>
-              <div className="rechteBox">
-                <div class="block_1 templateEins">
-                  {" "}
-                  <h4 className="block">Kenntnisse</h4>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div
+        ref={componentRef}
+        style={{ width: "100%", height: window.innerHeight }}
+      >
+        <div className="containerTemplateEins">
+          <div className="header">header</div>
+          <div className="untertitel">untertitel</div>
+          <div className="contentLinksTemplateEins">Persönliches Profil</div>
+          <div className="contentRechtsTemplateEins">Beruflicher Werdegang</div>
+          <div className="faehigkeiten">faehigkeiten</div>{" "}
+          <div className="kontaktinformationen">Kontaktinformationen</div>
+          <div className="schulbildung">Schulbildung</div>
+          <div className="hobbiesTemplateEins">Hobbys</div>
+          <div className="footerTemplateEins">Footer</div>
         </div>
+        <button onClick={handlePrint}>Print</button>
       </div>
     </>
   );

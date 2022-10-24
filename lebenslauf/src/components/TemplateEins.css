@@ -6,71 +6,65 @@
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
 }
-.ul {
-  list-style-type: none;
-}
-.boxEins {
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  align-self: center;
+.containerTemplateEins {
+  width: 100%;
   height: 100vh;
-  width: 100vw;
-}
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 120px 50px 1fr 1fr 1fr 1fr 120px;
+  gap: 10px;
 
-.boxEins .innerBoxEins {
-  width: 40vw;
-  height: 95vh;
-  /* aspect-ratio: 0.5; */
-  background-image: url("../images/HinterGrundTemplateEins.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  margin: 0;
+  box-sizing: border-box;
 }
-.hTemplateEins {
-  font-family: "Barlow Condensed", sans-serif;
-  padding-top: 0;
+.containerTemplateEins div {
+  padding: 10px;
+  border: 1px solid black;
 }
-/* .block_1 {
-  width: fit-content;
-
-} */
-.hauptBox {
-  display: flex;
-  flex-direction: column;
+.header {
+  grid-column-start: 1;
+  grid-column-end: 5;
 }
-.templateEins {
-  padding-bottom: 10px;
-  border-bottom: 2px solid #000; /* whichever color you prefer */
+.untertitel {
+  grid-column-start: 1;
+  grid-column-end: 5;
 }
-.linkeBox {
-  border: 2px black solid;
-  width: 30vw;
-  margin-left: 1rem;
-  height: 90vh;
+.contentLinksTemplateEins {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: span 1;
 }
-.strong {
-  margin-top: 0.5rem;
+.contentRechtsTemplateEins {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: span 2;
 }
-.block {
-  margin-top: 8rem;
+.faehigkeiten {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: span 1;
 }
-.rechteBox {
-  border: 2px black solid;
-  width: 30vw;
-  height: 90vh;
+.kontaktinformationen {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 5;
+  grid-row-end: span 1;
 }
-.kringel {
-  width: 35%;
-  height: 55%;
-
-  position: absolute;
-  bottom: 4rem;
-
-  right: 46rem;
+.schulbildung {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 5;
+  grid-row-end: span 2;
 }
-.mitKringel {
-  position: relative;
+.hobbiesTemplateEins {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 6;
+  grid-row-end: span 1;
+}
+.footerTemplateEins {
+  grid-column-start: 1;
+  grid-column-end: 5;
 }
