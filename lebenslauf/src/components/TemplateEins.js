@@ -39,6 +39,49 @@ const TemplateEins = () => {
       stellen: user.stellenZwei,
     },
   ];
+  const schule = [
+    {
+      schule: user.schule,
+      schulStart: user.startSchule,
+      schulEnde: user.endSchule,
+    },
+    {
+      schule: user.mittlereSchulreife,
+      schulStart: user.start,
+      schulEnde: user.end,
+    },
+    {
+      schule: user.mittlereSchule,
+      schulStart: user.startMittlereSchule,
+      schulEnde: user.endMittlereSchule,
+    },
+  ];
+
+  const ausbildung = [
+    {
+      ausbildung: user.ausbildung,
+      staette: user.ausbildungsStaette,
+      start: user.startAusbildung,
+      end: user.endAusbildung,
+    },
+  ];
+
+  const studium = [
+    {
+      abschluss: user.uniAbschluss,
+      studiengang: user.studiengang,
+      universitaet: user.universitaet,
+      start: user.startStudiengang,
+      end: user.endStudiengang,
+    },
+    {
+      abschluss: user.bachelor,
+      studiengang: user.universitaetBachelor,
+      universitaet: user.studiengangBachelor,
+      start: user.startUniversitaetBachelor,
+      end: user.endUniversitaetBachelor,
+    },
+  ];
   console.log(beruf);
   return (
     <>
@@ -85,12 +128,49 @@ const TemplateEins = () => {
           </div>{" "}
           <div className="kontaktinformationen">
             <div> Kontaktinformationen</div>
-            {user.tel.length > 1 ? <li>{user.tel}</li> : null}
-            {user.mail.length > 1 ? <li>{user.mail}</li> : null}
-            {user.tel.length > 1 ? <li>{user.tel}</li> : null}
+            {user.str.length > 1 ? (
+              <li>
+                Adresse: {user.str} {user.hausnummer} <br /> {user.plz}{" "}
+                {user.stadt}
+              </li>
+            ) : null}
+
+            {user.tel.length > 1 ? <li>Mobil: {user.tel}</li> : null}
+            {user.mail.length > 1 ? <li>Mail: {user.mail}</li> : null}
           </div>
-          <div className="schulbildung">Schulbildung</div>
-          <div className="hobbiesTemplateEins">Hobbys</div>
+          <div className="schulbildung">
+            <div>Schulbildung</div>
+            {studium.abschluss.length > 1 ? (
+              <>
+                {studium.map((item) => (
+                  <>
+                    <li>{item.universitaet}</li>
+                    <li>
+                      {item.abschluss} in {item.studiengang}, {item.end}
+                    </li>
+                  </>
+                ))}
+              </>
+            ) : null}
+            {ausbildung.abschluss.length > 1 ? (
+              <>
+                {ausbildung.map((item) => (
+                  <>
+                    <li>{item.staette}</li>
+                    <li>
+                      Abschluss im Jahr {item.end},{item.ausbildung},
+                    </li>
+                  </>
+                ))}
+              </>
+            ) : null}
+          </div>
+          <div className="hobbiesTemplateEins">
+            <div>Interessen und Hobbys</div>
+            {user.hobbies.map((item) => (
+              <li>{item}</li>
+            ))}
+          </div>
           <div className="footerTemplateEins">{user.name}</div>
         </div>
         <button onClick={handlePrint}>Print</button>
