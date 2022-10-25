@@ -214,19 +214,22 @@ const TemplateZwei = () => {
 
           <div class="boxSprache">
             <h3>Sprache</h3>
+
             <ul>
               {sprache.map((item) => (
-                <li>{item.sprache}</li>
+                <li>
+                  {item.sprache} {item.niveau}{" "}
+                </li>
               ))}
             </ul>
           </div>
-          <div class="boxNiveau">
+          {/*  <div class="boxNiveau">
             <ul>
               {sprache.map((item) => (
                 <li>{item.niveau}</li>
               ))}
             </ul>
-          </div>
+          </div> */}
         </div>
       </div>
 
