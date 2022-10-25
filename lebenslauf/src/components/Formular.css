@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 h1 {
   padding-top: 3rem;
   text-align: center;
@@ -31,11 +32,10 @@ label {
   background: none;
 }
 
-.cta.zu.per{
+.cta.zu.per {
   position: absolute;
-  top:20px;
+  top: 20px;
   right: 90px;
-
 }
 
 .cta.zu:before {

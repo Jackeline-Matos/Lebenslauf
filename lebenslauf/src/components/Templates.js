@@ -47,7 +47,7 @@ const Templates = () => {
           }}
         >
           <svg viewBox="0 0 13 10" height="10px" width="15px"></svg>
-          <span>
+          <span style={{ color: "black" }}>
             <FontAwesomeIcon icon={faArrowLeft} />
             Zurück
           </span>
@@ -78,6 +78,7 @@ const Templates = () => {
               setUser({ ...user, template: 1 });
               navigate("/formular");
             }}
+            style={{ color: "black" }}
           >
             zum Formular
             <FontAwesomeIcon icon={faArrowRight} />
@@ -109,6 +110,7 @@ const Templates = () => {
               setUser({ ...user, template: 2 });
               navigate("/formular");
             }}
+            style={{ color: "black" }}
           >
             zum Formular
             <FontAwesomeIcon icon={faArrowRight} />
@@ -139,6 +141,7 @@ const Templates = () => {
               setUser({ ...user, template: 3 });
               navigate("/formular");
             }}
+            style={{ color: "black" }}
           >
             zum Formular
             <FontAwesomeIcon icon={faArrowRight} />

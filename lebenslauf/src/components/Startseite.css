@@ -4,12 +4,17 @@
   box-sizing: border-box;
 }
 .background {
-  background: rgb(18, 33, 227);
-  background: radial-gradient(
+  background: rgb(205, 210, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(205, 210, 255, 1) 45%,
+    rgba(0, 81, 161, 1) 45%
+  );
+  /* background: radial-gradient(
     circle,
     rgba(18, 33, 227, 0.7959558823529411) 3%,
     rgba(215, 244, 255, 0.4150035014005602) 58%
-  );
+  ); */
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -31,8 +36,9 @@ h1 {
 }
 .button {
   font-size: 2rem;
-  background-color: rgb(65, 128, 244);
+  background-color: white;
   padding: 1rem;
   border: none;
-  color: white;
+  color: rgba(205, 210, 255);
+  border-radius: 5%;
 }
