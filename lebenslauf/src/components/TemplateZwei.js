@@ -106,6 +106,7 @@ const TemplateZwei = () => {
         <p>{user.mail}</p>
       </div>
       <div class="alterGeburtstag">
+        <p> Jahre</p>
         <p>{user.alter}</p>
         <p>{user.born}</p>
       </div>
@@ -120,14 +121,14 @@ const TemplateZwei = () => {
         </>
       </div>
       <div class="boxBeruf">
+        <h3>Berufserfahrung</h3>
         <ul>
           {beruf.map((item) => (
             <>
               {item.stellen.length > 1 ? (
                 <>
-                  <h3>Berufserfahrung</h3>
                   <li>{item.stellen} </li>{" "}
-                  <li className="margin-bottom">
+                  <li>
                     {item.unternehmen}- {item.start}-{item.end}
                   </li>
                 </>
