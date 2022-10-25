@@ -93,7 +93,7 @@ const TemplateZwei = () => {
         ref={componentRef}
         style={{
           width: "100%",
-          height: window.innerHeight,
+          height: "window.innerHeight",
         }}
       >
         <div

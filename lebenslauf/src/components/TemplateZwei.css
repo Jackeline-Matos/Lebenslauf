@@ -10,9 +10,10 @@
 .container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 120px 50px 1fr 1fr 1fr 1fr 120px;
+  grid-template-rows: 120px 50px 1fr 1fr 1fr 1fr 1fr;
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  gap: 10px;
   font-family: 'Space Mono', monospace, sans-serif;
   color:white;
 }
@@ -31,8 +32,9 @@
   grid-column: 1/3;
   grid-row: 2/3;
   font-size: small;
-  padding-left: 3rem;
-  padding-top: 3rem;
+  margin-left: 3rem;
+  margin-top: 2rem;
+
 }
 
 .alterGeburtstag {
@@ -47,7 +49,6 @@
 .uberMich{
   grid-column:1/5;
   grid-row:4/5;
-  padding-top: 3rem;
   padding-left: 2rem;
   text-align: center;
   font-size: small;
@@ -72,6 +73,7 @@ ul li,
 .boxBeruf {
   grid-column: 1/3;
   grid-row: 5/6;
+  margin-left: 5rem;
 
 }
 
@@ -91,21 +93,24 @@ ul li,
 .boxKentinisse {
   grid-column: 1/2;
   grid-row: 6/7;
+  margin-left: 5rem;
 }
 
 .boxHobbies {
   grid-column: 2/3;
   grid-row: 6/7;
+  margin-left: 5rem;
 }
 
 .boxSprache {
   grid-column: 3/4;
   grid-row: 6/7;
+  margin-left: 5rem;
 }
 .boxButton{
   position:absolute;
   right: 2px;
-  bottom: 45px;
+  top: 30px;
   padding-right: 15px;
 }
 
@@ -127,11 +132,5 @@ ul li,
   animation:  1.5s infinite;
  }
  
- .boxNiveau{
-   grid-column:3/4;
-   grid-row:6/7;
-   justify-self: end;
-   margin-top: 4.2rem;
-   padding-right: 4rem;
-   font-size: small;
- }
+
+ 
