@@ -238,8 +238,7 @@ const TemplateEins = () => {
           </div>
           <div className="footerTemplateEins">
             {user.name.toUpperCase()}{" "}
-            <div className="printFooter">
-              {" "}
+            <div>
               <button onClick={handlePrint}>Print</button>
             </div>
           </div>
