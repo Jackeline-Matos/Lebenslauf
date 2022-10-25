@@ -90,11 +90,14 @@ const TemplateEins = () => {
           <div className="header">{user.vorname.toUpperCase()}</div>
           <div className="untertitel">{user.stellen}</div>
           <motion.div
-            whileHover={{ scale: 1.2 }}
+            whileHover={{ scale: 1.01, border: "2px green solid" }}
             drag
             className="contentLinksTemplateEins"
           >
-            <div>
+            <motion.div
+              whileHover={{ scale: 1.01, border: "2px green solid" }}
+              drag
+            >
               <strong
                 style={{
                   fontFamily: "Mulish, sans-serif",
@@ -103,10 +106,14 @@ const TemplateEins = () => {
               >
                 Persönliches Profil
               </strong>{" "}
-            </div>
+            </motion.div>
             <p>{user.text}</p>
           </motion.div>
-          <div className="contentRechtsTemplateEins">
+          <motion.div
+            whileHover={{ scale: 1.01, border: "2px green solid" }}
+            drag
+            className="contentRechtsTemplateEins"
+          >
             <div>
               <strong
                 style={{
@@ -131,8 +138,12 @@ const TemplateEins = () => {
                 </>
               ))}
             </ul>
-          </div>
-          <div className="faehigkeiten">
+          </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.01, border: "2px green solid" }}
+            drag
+            className="faehigkeiten"
+          >
             <div>
               <strong
                 style={{
@@ -151,8 +162,12 @@ const TemplateEins = () => {
                 <li>{hobby}</li>
               ))}
             </ul>
-          </div>{" "}
-          <div className="kontaktinformationen">
+          </motion.div>{" "}
+          <motion.div
+            whileHover={{ scale: 1.01, border: "2px green solid" }}
+            drag
+            className="kontaktinformationen"
+          >
             <div>
               <strong
                 style={{
@@ -175,8 +190,12 @@ const TemplateEins = () => {
             {user.mail.length > 1 ? (
               <li className="margin-bottom">Mail: {user.mail}</li>
             ) : null}
-          </div>
-          <div className="schulbildung">
+          </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.01, border: "2px green solid" }}
+            drag
+            className="schulbildung"
+          >
             <div>
               <strong
                 style={{
@@ -224,8 +243,12 @@ const TemplateEins = () => {
                 ))}
               </>
             ) : null}
-          </div>
-          <div className="hobbiesTemplateEins">
+          </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.01, border: "2px green solid" }}
+            drag
+            className="hobbiesTemplateEins"
+          >
             <div>
               <strong
                 style={{
@@ -239,8 +262,14 @@ const TemplateEins = () => {
             {user.item.map((item) => (
               <li>{item}</li>
             ))}
-          </div>
-          <div className="footerTemplateEins">{user.name.toUpperCase()} </div>
+          </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.01, border: "2px green solid" }}
+            drag
+            className="footerTemplateEins"
+          >
+            {user.name.toUpperCase()}{" "}
+          </motion.div>
         </div>
       </div>
       <div className="printFooter">
