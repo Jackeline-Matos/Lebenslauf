@@ -10,8 +10,8 @@
 .container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 100px 40px 1fr 1fr 1fr;
-  width: 100vw;
+  grid-template-rows: 120px 50px 1fr 1fr 1fr 1fr 120px;
+  width: 100%;
   height: 100vh;
   font-family: 'Space Mono', monospace, sans-serif;
   color:white;
@@ -32,7 +32,7 @@
   grid-row: 2/3;
   font-size: small;
   padding-left: 3rem;
-  padding-top: 1rem;
+  padding-top: 3rem;
 }
 
 .alterGeburtstag {
@@ -40,13 +40,13 @@
   grid-row: 2/3;
   font-size: small;
   padding-right: 10rem;
-  padding-top: 2rem;
+  padding-top: 3rem;
   direction: rtl;
 }
 
 .uberMich{
   grid-column:1/5;
-  grid-row:3/4;
+  grid-row:4/5;
   padding-top: 3rem;
   padding-left: 2rem;
   text-align: center;
@@ -71,7 +71,8 @@ ul li,
 
 .boxBeruf {
   grid-column: 1/3;
-  grid-row: 4/5;
+  grid-row: 5/6;
+
 }
 
 .boxBeruf h3,
@@ -84,22 +85,22 @@ ul li,
 
 .boxSchulbildung {
   grid-column: 3/5;
-  grid-row: 4/5;
+  grid-row: 5/6;
 }
 
 .boxKentinisse {
   grid-column: 1/2;
-  grid-row: 5/6;
+  grid-row: 6/7;
 }
 
 .boxHobbies {
   grid-column: 2/3;
-  grid-row: 5/6;
+  grid-row: 6/7;
 }
 
 .boxSprache {
   grid-column: 3/4;
-  grid-row: 5/6;
+  grid-row: 6/7;
 }
 .boxButton{
   position:absolute;
@@ -128,9 +129,9 @@ ul li,
  
  .boxNiveau{
    grid-column:3/4;
-   grid-row:5/6;
+   grid-row:6/7;
    justify-self: end;
    margin-top: 4.2rem;
-   padding-right: 5rem;
+   padding-right: 4rem;
    font-size: small;
  }
