@@ -89,7 +89,11 @@ const TemplateEins = () => {
         <div className="containerTemplateEins">
           <div className="header">{user.vorname.toUpperCase()}</div>
           <div className="untertitel">{user.stellen}</div>
-          <motion.div className="contentLinksTemplateEins">
+          <motion.div
+            whileHover={{ scale: 1.2 }}
+            drag
+            className="contentLinksTemplateEins"
+          >
             <div>
               <strong
                 style={{
@@ -236,14 +240,12 @@ const TemplateEins = () => {
               <li>{item}</li>
             ))}
           </div>
-          <div className="footerTemplateEins">
-            {user.name.toUpperCase()}{" "}
-            <div className="printFooter">
-              {" "}
-              <button onClick={handlePrint}>Print</button>
-            </div>
-          </div>
+          <div className="footerTemplateEins">{user.name.toUpperCase()} </div>
         </div>
+      </div>
+      <div className="printFooter">
+        {" "}
+        <button onClick={handlePrint}>Print</button>
       </div>
     </>
   );

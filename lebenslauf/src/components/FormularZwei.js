@@ -94,9 +94,10 @@ const FormularZwei = () => {
               name="überDich"
               id=""
               cols="30"
-              rows="10"
+              rows="4"
               value={user.text}
               onChange={(e) => setUser({ ...user, text: e.target.value })}
+              style={{ fontSize: "1.5rem" }}
             ></textarea>
           </div>
         </div>
