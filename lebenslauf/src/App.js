@@ -68,7 +68,7 @@ function App() {
     startStudiengang: "",
     endStudiengang: "",
 
-    bachelor: "bachelor",
+    bachelor: "Bachelor",
     universitaetBachelor: "",
     studiengangBachelor: "",
     startUniversitaetBachelor: "",
