@@ -83,8 +83,8 @@ const TemplateZwei = () => {
 
   const sprache = [
     { sprache: user.sprache, niveau: user.niveau },
-    { sprache: user.spracheEins },
-    { sprache: user.spracheZwei },
+    { sprache: user.spracheEins, niveau: user.niveauEins },
+    { sprache: user.spracheZwei, niveau: user.niveauZwei },
   ];
 
   return (
