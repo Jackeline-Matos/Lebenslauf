@@ -2,6 +2,7 @@ import "./Templates.css";
 import curricolo from "../images/Chef de Cozinha Currículo Simples com Foto (1).png";
 import curricoloEins from "../images/Chef de Cozinha Currículo Simples com Foto (6).png";
 import curricoloZwei from "../images/Chef de Cozinha Currículo Simples com Foto (4).png";
+import franka from "../images/frankaM.png";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -46,7 +47,7 @@ const Templates = () => {
           }}
         >
           <svg viewBox="0 0 13 10" height="10px" width="15px"></svg>
-          <span>
+          <span style={{ color: "black" }}>
             <FontAwesomeIcon icon={faArrowLeft} />
             Zurück
           </span>
@@ -68,7 +69,7 @@ const Templates = () => {
           onDragEnd={{ top: 0, left: 0, right: 0, bottom: 0 }}
           animate={{ move: 200 }}
           transition={{ type: "spring", bounce: 0.01 }}
-          src={curricolo}
+          src={franka}
         />
         <button class="cta zu">
           <svg viewBox="0 0 13 10" height="10px" width="15px"></svg>
@@ -77,6 +78,7 @@ const Templates = () => {
               setUser({ ...user, template: 1 });
               navigate("/formular");
             }}
+            style={{ color: "black" }}
           >
             zum Formular
             <FontAwesomeIcon icon={faArrowRight} />
@@ -108,6 +110,7 @@ const Templates = () => {
               setUser({ ...user, template: 2 });
               navigate("/formular");
             }}
+            style={{ color: "black" }}
           >
             zum Formular
             <FontAwesomeIcon icon={faArrowRight} />
@@ -138,6 +141,7 @@ const Templates = () => {
               setUser({ ...user, template: 3 });
               navigate("/formular");
             }}
+            style={{ color: "black" }}
           >
             zum Formular
             <FontAwesomeIcon icon={faArrowRight} />

@@ -5,11 +5,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
- 
 }
 
-.container{
-
+.container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 100px 40px 1fr 1fr 1fr;
@@ -19,28 +17,27 @@
   color:white;
 }
 
-
-.boxHeader{
+.boxHeader {
   display: grid;
   grid-column: 1/5;
   grid-row:1/2;
   place-items: center;
 }
 
-.boxHeader h1{
-  font-size:50px;
+.boxHeader h1 {
+  font-size: 50px;
 }
-.adressTelMailAlter{
-  grid-column:1/3;
-  grid-row:2/3;
+.adressTelMailAlter {
+  grid-column: 1/3;
+  grid-row: 2/3;
   font-size: small;
   padding-left: 3rem;
   padding-top: 1rem;
 }
 
-.alterGeburtstag{
-  grid-column:3/5;
-  grid-row:2/3;
+.alterGeburtstag {
+  grid-column: 3/5;
+  grid-row: 2/3;
   font-size: small;
   padding-right: 10rem;
   padding-top: 2rem;
@@ -56,61 +53,53 @@
   font-size: small;
 }
 
-ul li, .boxSchulbildung li{
+ul li,
+.boxSchulbildung li {
   list-style-type: none;
   padding-left: 1rem;
-
-
 }
 
-.boxBeruf, 
+.boxBeruf,
 .boxSchulbildung,
 .boxKentinisse,
 .boxHobbies,
-.boxSprache{
+.boxSprache {
   padding-left: 1rem;
   padding-top: 1rem;
   font-size: 13px;
 }
 
-.boxBeruf{
-  grid-column:1/3;
-  grid-row:4/5;
-
-
+.boxBeruf {
+  grid-column: 1/3;
+  grid-row: 4/5;
 }
 
-.boxBeruf h3, 
-.boxSchulbildung h3, 
+.boxBeruf h3,
+.boxSchulbildung h3,
 .boxKentinisse h3,
 .boxHobbies h3,
-.boxSprache h3{
+.boxSprache h3 {
   padding-bottom: 1rem;
 }
 
 .boxSchulbildung {
-
-  grid-column:3/5;
-  grid-row:4/5;
+  grid-column: 3/5;
+  grid-row: 4/5;
 }
 
-.boxKentinisse{
-  grid-column:1/2;
-  grid-row:5/6;
-
-
+.boxKentinisse {
+  grid-column: 1/2;
+  grid-row: 5/6;
 }
 
-.boxHobbies{
-  grid-column:2/3;
-  grid-row:5/6;
-
+.boxHobbies {
+  grid-column: 2/3;
+  grid-row: 5/6;
 }
 
-.boxSprache{
-  grid-column:3/4;
-  grid-row:5/6;
-
+.boxSprache {
+  grid-column: 3/4;
+  grid-row: 5/6;
 }
 .boxButton{
   position:absolute;
@@ -119,7 +108,7 @@ ul li, .boxSchulbildung li{
   padding-right: 15px;
 }
 
-.boxButton button{
+.boxButton button {
   border: none;
   color: #fff;
   background-image: linear-gradient(30deg, #0400ff, #4ce3f7);
