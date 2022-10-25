@@ -47,6 +47,7 @@ const Formular = () => {
           <div className="flex">
             <label htmlFor="name">Name</label>
             <input
+              required
               type="text"
               id="name"
               value={user.name}
@@ -56,6 +57,7 @@ const Formular = () => {
           <div className="flex">
             <label htmlFor="vorname">Vorname</label>
             <input
+              required
               type="text"
               id="vorname"
               value={user.vorname}
@@ -87,6 +89,7 @@ const Formular = () => {
           <div className="flex">
             <label htmlFor="strasse">Strasse</label>
             <input
+              required
               type="text"
               id="strasse"
               value={user.strasse}
@@ -96,6 +99,7 @@ const Formular = () => {
           <div className="flex">
             <label htmlFor="hausnummer">Hausnummer</label>
             <input
+              required
               type="number"
               id="hausnummer"
               value={user.hausnummer}
@@ -107,6 +111,7 @@ const Formular = () => {
           <div className="flex">
             <label htmlFor="plz">PLZ</label>
             <input
+              required
               type="number"
               id="plz"
               value={user.plz}
@@ -116,6 +121,7 @@ const Formular = () => {
           <div className="flex">
             <label htmlFor="stadt">Stadt</label>
             <input
+              required
               type="text"
               id="stadt"
               value={user.stadt}
@@ -127,6 +133,7 @@ const Formular = () => {
           <div className="flex">
             <label htmlFor="mail">Email</label>
             <input
+              required
               type="email"
               id="mail"
               value={user.mail}
@@ -136,6 +143,7 @@ const Formular = () => {
           <div className="flex">
             <label htmlFor="tel">Tel</label>
             <input
+              required
               type="number"
               id="tel"
               value={user.tel}
