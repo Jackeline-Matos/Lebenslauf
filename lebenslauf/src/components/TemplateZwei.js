@@ -106,12 +106,19 @@ const TemplateZwei = () => {
         <p>{user.mail}</p>
       </div>
       <div class="alterGeburtstag">
+        <p> Jahre</p>
         <p>{user.alter}</p>
         <p>{user.born}</p>
       </div>
       <div class="uberMich">
-        <h3>Über Mich</h3>
-        <p>{user.text}</p>
+        <>
+          {user.text.length > 1 ? (
+            <>
+              <h3>Über Mich</h3>
+              <p>{user.text}</p>
+            </>
+          ) : null}
+        </>
       </div>
       <div class="boxBeruf">
         <h3>Berufserfahrung</h3>
@@ -121,7 +128,7 @@ const TemplateZwei = () => {
               {item.stellen.length > 1 ? (
                 <>
                   <li>{item.stellen} </li>{" "}
-                  <li className="margin-bottom">
+                  <li>
                     {item.unternehmen}- {item.start}-{item.end}
                   </li>
                 </>
@@ -195,6 +202,9 @@ const TemplateZwei = () => {
             <li>{hobby}</li>
           ))}
         </ul>
+      </div>
+      <div className="boxButton">
+        <button>Print</button>
       </div>
     </div>
   );

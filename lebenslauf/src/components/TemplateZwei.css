@@ -10,7 +10,7 @@
 .container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 100px 80px 90px 210px 1fr;
+  grid-template-rows: 100px 40px 1fr 1fr 1fr;
   width: 100vw;
   height: 100%;
   font-family: "Space Mono", monospace, sans-serif;
@@ -20,9 +20,14 @@
 .boxHeader {
   display: grid;
   grid-column: 1/5;
+<<<<<<< HEAD
   grid-row: 1/2;
   border: 1px solid black;
 
+=======
+  grid-row:1/2;
+  
+>>>>>>> 101f67273b432145f64d53a3b2e9fbeca93e147f
   place-items: center;
 }
 
@@ -41,17 +46,28 @@
   grid-column: 3/5;
   grid-row: 2/3;
   font-size: small;
+<<<<<<< HEAD
   border: 1px solid black;
   padding-right: 2rem;
+=======
+  padding-right: 15rem;
+>>>>>>> 101f67273b432145f64d53a3b2e9fbeca93e147f
   padding-top: 3rem;
   direction: rtl;
 }
 
+<<<<<<< HEAD
 .uberMich {
   border: 1px solid black;
   grid-column: 1/5;
   grid-row: 3/4;
 
+=======
+.uberMich{
+  grid-column:1/5;
+  grid-row:3/4;
+  
+>>>>>>> 101f67273b432145f64d53a3b2e9fbeca93e147f
   padding-left: 2rem;
   text-align: center;
   font-size: small;
@@ -71,7 +87,10 @@ ul li,
   padding-left: 1rem;
   padding-top: 1rem;
   font-size: 13px;
+<<<<<<< HEAD
   border: 1px solid black;
+=======
+>>>>>>> 101f67273b432145f64d53a3b2e9fbeca93e147f
 }
 
 .boxBeruf {
@@ -102,7 +121,42 @@ ul li,
   grid-row: 5/6;
 }
 
+<<<<<<< HEAD
 .boxSprache {
   grid-column: 3/4;
   grid-row: 5/6;
 }
+=======
+.boxSprache{
+  grid-column:3/4;
+  grid-row:5/6;
+
+}
+.boxButton{
+  grid-column:4/5;
+  grid-row:5/6;
+  justify-self: end;
+  margin-top: 2.9rem;
+  margin-right: 3rem;
+
+}
+
+.boxButton button{
+  border: none;
+  color: #fff;
+  background-image: linear-gradient(30deg, #0400ff, #4ce3f7);
+  border-radius: 20px;
+  background-size: 100% auto;
+  font-family: inherit;
+  font-size: 15px;
+  padding: 0.6em 1.5em;
+}
+
+.boxButton button:hover {
+  background-position: right center;
+  background-size: 200% auto;
+  -webkit-animation:  2s infinite;
+  animation:  1.5s infinite;
+ }
+ 
+>>>>>>> 101f67273b432145f64d53a3b2e9fbeca93e147f
