@@ -5,6 +5,5 @@ Das Modell wird zu Beginn des Prozesses ausgewählt.
 </div>
 
 ### Create Your CV
-<p align="center">
-<img src="projektFotos-Readme/startseit.jpg" alt="teste">
-</p>
+
+![Startseit](/projektFotos-Readme/startseit.jpg)
