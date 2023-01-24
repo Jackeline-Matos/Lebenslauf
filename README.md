@@ -5,13 +5,14 @@
 Bei dem Projekt handelt es sich um einen Lehrplangenerator, der anhand von Formularen, die der Benutzer ausfüllt, ein Lehrplanmodell liefert. 
 Das Modell wird zu Beginn des Prozesses ausgewählt. 
 
-##Create Your CV 
-<div>
-<img width="400" src="projektFotos-Readme/startseit.png">
-<img width="400"  src="projektFotos-Readme/cvs.png">
-<img width="400"  src="projektFotos-Readme/formular-pd.png">
-<img width="400" src="projektFotos-Readme/formular-berufs.png">
-<img width="400" src="projektFotos-Readme/formular-kentinisse.png">
-<img width="400" src="projektFotos-Readme/vollständigcv.png">
+<a href="https://github.com/Jackeline-Matos/Lebenslauf/tree/main/lebenslauf/projektFotos-Readme">
+<h2> Create Your CV </h2>
+</a>
 
-</div>
+## Entwicklungstools
+* React
+* HTML
+* CSS
+* JS
+* Framer Motion
+* React-to-Print
