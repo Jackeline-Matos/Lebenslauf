@@ -4,6 +4,5 @@ Bei dem Projekt handelt es sich um einen Lehrplangenerator, der anhand von Formu
 Das Modell wird zu Beginn des Prozesses ausgewählt. 
 </div>
 
-### Create Your CV
 
-![Startseit](/projektFotos-Readme/startseit.jpg)
+![Startseit](/projektFotos-Readme/startseit.png)
