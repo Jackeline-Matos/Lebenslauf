@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import "./TemplateZwei.css";
 import Bild from "../images/templateZwei.png";
 import { useReactToPrint } from "react-to-print";
+
 const TemplateZwei = () => {
   const componentRef = useRef();
   const handlePrint = useReactToPrint({

@@ -10,7 +10,7 @@
 .container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 120px 50px 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 120px 50px 1fr 1fr 1fr 1fr 1fr 70px;
   width: 100%;
   height: 100%;
   gap: 10px;
@@ -92,11 +92,11 @@ ul li,
   margin-top: 10rem;
 }
 
-.boxSprache,
+/* .boxSprache,
 .boxHobbies,
 .boxKentinisse{
   margin-top: 3.5rem;
-}
+} */
 
 .boxKentinisse {
   grid-column: 1/2;

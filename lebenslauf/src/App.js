@@ -93,17 +93,7 @@ function App() {
     { start: "", end: "", unternehmen: "", stellen: "" },
     { start: "", end: "", unternehmen: "", stellen: "" }
   );
-  // useEffect(() => {
-  //   const cartItemsData = JSON.parse(localStorage.getItem('cartItems'))
 
-  //   if (cartItemsData) {
-  //       setCartItems(cartItemsData)
-  //   }
-  // }, [])
-
-  // useEffect(() => {
-  //   localStorage.setItem('cartItems', JSON.stringify(cartItems))
-  // }, [cartItems])
   return (
     <UserContext.Provider value={user}>
       <AnimatePresence>
