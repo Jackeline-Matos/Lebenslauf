@@ -79,12 +79,20 @@ const TemplateEins = () => {
       end: user.endUniversitaetBachelor,
     },
   ];
+  const sprachen = [
+    { sprache: user.sprache, niveau: user.niveau },
+    { sprache: user.spracheEins, niveau: user.niveauEins },
+    { sprache: user.spracheZwei, niveau: user.niveauZwei },
+  ];
   console.log(beruf);
   return (
-    <>
+    <div style={{ backgroundColor: "#e9e9c1" }}>
       <div
         ref={componentRef}
-        style={{ width: "100%", height: window.innerHeight }}
+        style={{
+          width: "100%",
+          height: window.innerHeight,
+        }}
       >
         <div className="containerTemplateEins">
           <div className="header">{user.vorname.toUpperCase()}</div>
@@ -133,6 +141,35 @@ const TemplateEins = () => {
                       <li className="margin-bottom">
                         {item.unternehmen}- {item.start}-{item.end}
                       </li>
+                    </>
+                  ) : null}
+                </>
+              ))}
+            </ul>
+          </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.01, border: "2px green solid" }}
+            drag
+            className="sprachen"
+          >
+            <div>
+              <strong
+                style={{
+                  fontFamily: "Mulish, sans-serif",
+                  fontSize: "16.6px",
+                }}
+              >
+                Sprachen
+              </strong>
+            </div>
+            <ul style={{ display: "flex", justifyContent: "space-around" }}>
+              {sprachen.map((item) => (
+                <>
+                  {item.sprache.length > 1 ? (
+                    <>
+                      <li>
+                        {item.sprache} -{item.niveau}-{" "}
+                      </li>{" "}
                     </>
                   ) : null}
                 </>
@@ -259,9 +296,11 @@ const TemplateEins = () => {
                 Interessen und Hobbys
               </strong>
             </div>
-            {user.item.map((item) => (
-              <li>{item}</li>
-            ))}
+            <ul style={{ display: "flex", justifyContent: "space-evenly" }}>
+              {user.item[0].length > 1
+                ? user.item.map((item) => <li>-{item}-</li>)
+                : null}
+            </ul>
           </motion.div>
           <motion.div
             whileHover={{ scale: 1.01, border: "2px green solid" }}
@@ -276,7 +315,7 @@ const TemplateEins = () => {
         {" "}
         <button onClick={handlePrint}>Print</button>
       </div>
-    </>
+    </div>
   );
 };
 
