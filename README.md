@@ -2,7 +2,7 @@
 ## React-Modul
 
 
-Bei dem Projekt handelt es sich um einen Cv-Generator, der anhand von Formularen, die der Benutzer ausfüllt, ein Lehrplanmodell liefert. 
+Bei dem Projekt handelt es sich um einen Cv-Generator, der anhand von Formularen, die der Benutzer ausfüllt, ein  CVmodell liefert. 
 Das Modell wird zu Beginn des Prozesses ausgewählt. 
 
 <a href="https://github.com/Jackeline-Matos/Lebenslauf/tree/main/lebenslauf/projektFotos-Readme">
