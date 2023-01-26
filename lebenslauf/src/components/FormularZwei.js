@@ -58,8 +58,8 @@ const FormularZwei = () => {
   // ];
 
   const removeList = (item) => {
-    const newList = faehigkeiten.filter((l) => l !== item);
-    setFaehigkeiten(newList);
+    const newListfaehigkeiten = faehigkeiten.filter((l) => l !== item);
+    setFaehigkeiten(newListfaehigkeiten);
   };
   const removeHobbies = (item) => {
     const newListHobbies = hobbies.filter((l) => l !== item);
@@ -137,9 +137,7 @@ const FormularZwei = () => {
                         color: "red",
                         cursor: "pointer",
                       }}
-                    >
-                      x
-                    </span>
+                    ></span>
                   </span>
                 );
               })}
@@ -148,11 +146,13 @@ const FormularZwei = () => {
 
           <div className="flex">
             <select
-              id="niveau"
-              value={user.niveau}
-              onChange={(e) => setUser({ ...user, niveau: e.target.value })}
+              id="niveaukentinisse"
+              value={user.niveaukentinisse}
+              onChange={(e) =>
+                setUser({ ...user, niveaukentinisse: e.target.value })
+              }
             >
-              <option value={"Muttersprache"}>Profi</option>
+              <option value={"Profi"}>Profi</option>
               <option value={"Grundkenntnisse"}>Fortgeschritten</option>
               <option value={"Gut"}>Anfänger</option>
             </select>
@@ -315,7 +315,7 @@ const FormularZwei = () => {
           <div className="flex sprache">
             <input
               type="text"
-              id="Kenntnisse"
+              id="hobbies"
               value={inputHobbies}
               onChange={(e) => setInputHobbies(e.target.value)}
             />
