@@ -1,5 +1,5 @@
-## Abschließendes Projekt 
-## React-Modul
+## Abschlussprojekt 
+## Modul - React
 
 
 Bei dem Projekt handelt es sich um einen Cv-Generator, der anhand von Formularen, die der Benutzer ausfüllt, ein  CVmodell liefert. 
